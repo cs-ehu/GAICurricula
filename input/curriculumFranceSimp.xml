@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<?oxygen SCHSchema="francia.sch" type="xml"?>
+<curriculums>
+    <curriculum name-nombre-nom="Fransua" img="../imgs/fransua.jpg" birthday-fnacimiento-datedenaissance="1995-02-25">
+        <prenom>Gusteau</prenom>
+        <passeport>AAA111111AB</passeport>
+        <CNI>562585891234</CNI>
+        <email>fran456@gmail.com</email>
+        <addresse country-paisOrigen-pays="France">
+            <CPFr>20452</CPFr>
+            <region>Saint Jean</region>
+            <province>France</province>
+            <ville>Paris</ville>
+            <rue>Remy</rue>
+            <portail>8</portail>
+            <appartement>2F</appartement>
+        </addresse>
+        <mobile>+33650678514</mobile>
+        <languematernelle>Francés</languematernelle>
+        <languesetrangeres>
+            <lng level-nivel-niveau="A2">Basque</lng>
+            <lng level-nivel-niveau="B2">Spanish</lng>
+        </languesetrangeres>
+        <carriere yearsstudying-añoscursando-anneesdetudes="6" course-curso-cours="5">Architecture</carriere>
+        <erasmusendroits>
+            <lieu>Bilbao</lieu>
+            <lieu>Barcelona</lieu>
+            <lieu>Sevilla</lieu>
+        </erasmusendroits>
+        <lieuprioritaire>Bilbao</lieuprioritaire>
+        <travail>
+            <occupation poste="cocinero" typedetravail="Pratiques rémunérées" lieudetravail="PisaKil">
+                <datededébut>2016-10-20</datededébut>
+                <datedefin>2018-10-20</datedefin>
+                <description>Cocinero a tiempo parcial</description>
+                <entreprise>Pisakil S.A.</entreprise>
+                <tempsconsacré>6</tempsconsacré>
+            </occupation>
+        </travail>
+        <notes notemoyenne="6">
+            <meilleurenote cours="Antropologia">
+                <codeetudiant>12345AB00A</codeetudiant>
+                <notemoyenne>6</notemoyenne>
+            </meilleurenote>
+            <meilleurenote cours="Estadistica">
+                <codeetudiant>12345AB00B</codeetudiant>
+                <notemoyenne>6</notemoyenne>
+            </meilleurenote>
+        </notes>
+        <realisation>
+            <realisationatteint>Practicas Junior</realisationatteint>
+        </realisation>
+        <obs>
+            <attitude>Confianza en si mismo</attitude>
+            <loisirs>Toca la guitarra</loisirs>
+            <competences>Sociable</competences>
+            <competencessociales>Divertido y atento</competencessociales>
+            <plansfuturs>Quiere ser un gran cocinero</plansfuturs>
+            <pportefeuilledeprojects>Ha escrito un libro de recetas</pportefeuilledeprojects>      
+        </obs>
+    </curriculum>
+    <curriculum name-nombre-nom="Hector" img="../imgs/hector.jpg" birthday-fnacimiento-datedenaissance="1995-02-25">
+        <prenom>Parsia</prenom>
+        <passeport>AAA111234AC</passeport>
+        <CNI>562585891234</CNI>
+        <email>hector123@gmail.com</email>
+        <addresse country-paisOrigen-pays="France">
+            <CPFr>20652</CPFr>
+            <region>Mitchelle</region>
+            <province>France</province>
+            <ville>Ceoui</ville>
+            <rue>Lingatrio</rue>
+            <portail>9</portail>
+            <appartement>5A</appartement>
+        </addresse>
+        <tlfne>+33950852557</tlfne>
+        <languematernelle>Francés</languematernelle>
+        <languesetrangeres>
+            <lng level-nivel-niveau="B1">Russian</lng>
+            <lng level-nivel-niveau="B2">Spanish</lng>
+        </languesetrangeres>
+        <carriere yearsstudying-añoscursando-anneesdetudes="5" course-curso-cours="5">Médecine</carriere>
+        <erasmusendroits>
+            <lieu>Bilbao</lieu>
+            <lieu>Barcelona</lieu>
+            <lieu>Sevilla</lieu>
+        </erasmusendroits>
+        <lieuprioritaire>Sevilla</lieuprioritaire>
+        <travail>
+            <occupation poste="traductor" typedetravail="Pratiques rémunérées" lieudetravail="Segad2">
+                <datededébut>2017-11-20</datededébut>
+                <datedefin>2018-08-13</datedefin>
+                <description>Traductor de libros</description>
+                <entreprise>Astral</entreprise>
+                <produit>Traducí varios libros</produit>
+            </occupation>
+        </travail>
+        <notes notemoyenne="7">
+            <meilleurenote cours="Lingüistica">
+                <codeetudiant>12387AB01A</codeetudiant>
+                <notemoyenne>6</notemoyenne>
+            </meilleurenote>
+            <meilleurenote cours="Fonética">
+                <codeetudiant>12245CD20B</codeetudiant>
+                <notemoyenne>8</notemoyenne>
+            </meilleurenote>
+        </notes>
+        <realisation>
+            <realisationatteint>Alumno con méritos en el consejo</realisationatteint>
+        </realisation>
+        <obs>
+            <attitude>Trabaja bien bajo presión</attitude>
+            <loisirs>Toca el bajo</loisirs>
+            <competences>Amable</competences>
+            <competencessociales>Se desenvuelve bien</competencessociales>
+            <plansfuturs>Quiere comprar una casa</plansfuturs>
+            <pportefeuilledeprojects>Tradució una novela</pportefeuilledeprojects>      
+        </obs>
+    </curriculum>
+</curriculums>
