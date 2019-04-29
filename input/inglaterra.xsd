@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:eras="http://www.erasmus.org"
+    xmlns:erasE="http://www.erasmusENGLAND.org" elementFormDefault="qualified"
+    targetNamespace="http://www.erasmusENGLAND.org">
+    <xsd:import namespace="http://www.erasmus.org" schemaLocation="erasmus.xsd"/>
+    <xsd:complexType name="AuxT">
+        <xsd:complexContent>
+            <xsd:restriction base="eras:CurriT">
+                <xsd:sequence>
+					<xsd:element ref="eras:surname"/>
+                	<xsd:element ref="eras:passport"/>
+                	<xsd:element ref="eras:DriveLicense"/>
+                	<xsd:element ref="eras:email"/>
+                	<xsd:element ref="eras:address"/>
+                	<xsd:choice>
+                		<xsd:element ref="eras:tlp"/>
+                		<xsd:element ref="eras:mobile"/>
+                	</xsd:choice>
+                    <xsd:element ref="eras:mothertongues"/>
+                	<xsd:element ref="eras:foreignlanguages"/>
+                	<xsd:element ref="eras:career"/>
+                	<xsd:element ref="eras:erasmusplaces"/>
+                	<xsd:element ref="eras:priorityplace"/>
+                	
+                </xsd:sequence>
+            </xsd:restriction>    
+        </xsd:complexContent>
+    </xsd:complexType>
+	
+	<xsd:complexType name="ErasFT">
+		<xsd:complexContent>
+			<xsd:extension base="erasE:AuxT">
+				<xsd:sequence>
+					<xsd:element name="skillsAndAptitudes" type="erasE:SkillsAndAptitudes" />
+					<xsd:element name="obs" type="erasE:observationsT"/>					
+				</xsd:sequence>
+			</xsd:extension>    
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="SkillsAndAptitudes">
+		<xsd:all minOccurs="0" maxOccurs="1">
+			<xsd:element name="skill1" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="aptitude1" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="skill2" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="aptitude2" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="skill3" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="aptitude3" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+		</xsd:all>
+	</xsd:complexType>
+	
+	<xsd:complexType name="observationsT">
+		<xsd:sequence minOccurs="0" maxOccurs="6">
+			<xsd:any namespace="##any" minOccurs="0" />
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="AddressING">
+		<xsd:complexContent>
+			<xsd:restriction base="eras:DireccionT">
+				<xsd:sequence>
+					<xsd:element ref="eras:CPIng"/>
+					<xsd:element ref="eras:region"/>
+					<xsd:element ref="eras:province"/>
+					<xsd:element ref="eras:city"/>
+					<xsd:element ref="eras:street"/>
+					<xsd:element ref="eras:doorway"/>
+					<xsd:element ref="eras:apartment"/>
+				</xsd:sequence>
+			</xsd:restriction>    
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="PlacesING">
+		<xsd:complexContent>
+			<xsd:restriction base="eras:LugaresT">
+				<xsd:sequence minOccurs="1" maxOccurs="6">
+					<xsd:element ref="eras:place"  />
+				</xsd:sequence>
+			</xsd:restriction>    
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	
+	<xsd:element name="hobby" type="xsd:string"/>
+	<xsd:element name="bestcompetences" type="xsd:string"/>
+	<xsd:element name="socialcompetences" type="xsd:string"/>
+	<xsd:element name="futureplans" type="xsd:string"/>
+	<xsd:element name="proyectportfolio" type="xsd:string"/>
+	
+</xsd:schema>
