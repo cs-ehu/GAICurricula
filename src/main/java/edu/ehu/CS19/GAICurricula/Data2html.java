@@ -1,7 +1,7 @@
 package edu.ehu.CS19.GAICurricula;
 
 public class Data2html {
-	@SuppressWarnings({ "static-access", "static-access" })
+
 	public static void main(String[] args) {
 		
 		XQueryMethods xqm = new XQueryMethods();
@@ -162,13 +162,143 @@ public class Data2html {
 		xqm.generaXQFichero(xqueryFR, filenameFRHTML);
 		
 		//Generación del fichero html que representa el erasmus de Inglaterra
-		/*String filenameENHTML = "output/curriculumEngland.html";
-		String xqueryEN = "<Insertar aqu� xquery de England>";
-		
-		xqm.generaXQFichero(xqueryEN, filenameENHTML);*/
-		
-		String filenameENHTML = "output/pomGAICurricula.html";
+		String filenameENHTML = "output/curriculumEngland.html";
 		String xqueryEN = "<html>\r\n" + 
+				"    <title>Curriculums erasmus</title>\r\n" + 
+				"    <head>\r\n" + 
+				"<meta charset=\"UTF-16\"></meta>" +
+				"        <h1>Curriculums erasmus</h1>\r\n" + 
+				"    </head>\r\n" + 
+				"    <body>\r\n" + 
+				"        <h2>Curriculums ingleses</h2>\r\n" + 
+				"        <!-- Importante cambiar en Java el filename de doc por su absoluta \"input/loquesea.xml\" -->\r\n" + 
+				"        <div\r\n" + 
+				"            id=\"curFran\">\r\n" + 
+				"            {\r\n" + 
+				"                for $c in doc(\"input/curriculumEnglandSimp.xml\")/curriculums/curriculum\r\n" + 
+				"                return\r\n" + 
+				"                    <div\r\n" + 
+				"                        id=\"{$c/passport}\">\r\n" + 
+				"                        <hr></hr>\r\n" + 
+				"                        <img\r\n" + 
+				"                            src=\"{data($c/@img)}\"\r\n" + 
+				"                            alt=\"{$c/surname}\"\r\n" + 
+				"                            height=\"350\"\r\n" + 
+				"                            width=\"300\"/>\r\n" + 
+				"                        <h3>Datos básicos</h3>\r\n" + 
+				"                        <strong>-Name and surname: </strong>\r\n" + 
+				"                        <br>{data($c/@name-nombre-nom)} {$c/surname}</br>\r\n" + 
+				"                        <br></br>\r\n" + 
+				"                        <strong>-Birthday: </strong>\r\n" + 
+				"                        <br>{data($c/@birthday-fnacimiento-datedenaissance)}</br>\r\n" + 
+				"                        <br></br>\r\n" + 
+				"                        <strong>-Passport: </strong>\r\n" + 
+				"                        {$c/passport}\r\n" + 
+				"                        <br></br>\r\n" + 
+				"                        <strong>-DriveLicense: </strong>\r\n" + 
+				"                        {$c/DriveLicense}\r\n" + 
+				"                        <br></br>\r\n" + 
+				"                        <strong>-Email: </strong>\r\n" + 
+				"                        {$c/email}\r\n" + 
+				"                        <br></br>\r\n" + 
+				"                        <strong>-Tlp/Mobile: </strong>\r\n" + 
+				"                        {$c/mobile, $c/tlp}\r\n" + 
+				"                        <h3>Dirección</h3>\r\n" + 
+				"                        <strong>country: </strong>\r\n" + 
+				"                        <br>{data($c/address/@country-paisOrigen-pays)}</br>\r\n" + 
+				"                        <br></br>\r\n" + 
+				"                        <strong> CP: </strong>\r\n" + 
+				"                        {$c/address/CPIng}\r\n" + 
+				"                        <strong> Region: </strong>\r\n" + 
+				"                        {$c/address/region}\r\n" + 
+				"                        <strong> Province: </strong>\r\n" + 
+				"                        {$c/address/province}\r\n" + 
+				"                        <br></br>\r\n" + 
+				"                        <strong>-City: </strong>\r\n" + 
+				"                        {$c/address/city}\r\n" + 
+				"                        <br></br>\r\n" + 
+				"                        <strong>-Street: </strong>\r\n" + 
+				"                        {$c/address/street}\r\n" + 
+				"                        <br></br>\r\n" + 
+				"                        <strong>-Address: </strong>\r\n" + 
+				"                        Portail {$c/addresse/doorway, $c/addresse/apartment}\r\n" + 
+				"                        <h3>Idiomas</h3>\r\n" + 
+				"                        <strong>-Mothertongues: </strong>\r\n" + 
+				"                        {$c/mothertongues}\r\n" + 
+				"                        <br></br>\r\n" + 
+				"                        <strong>-Foreignlanguages: </strong>\r\n" + 
+				"                        <table\r\n" + 
+				"                            border=\"1\">\r\n" + 
+				"                            <tr>\r\n" + 
+				"                                <th>Language</th><th>Level</th>\r\n" + 
+				"                            </tr>\r\n" + 
+				"                            {\r\n" + 
+				"                                for $l in $c/foreignlanguages/lng\r\n" + 
+				"                                return\r\n" + 
+				"                                    <tr>\r\n" + 
+				"                                        <td>{$l/text()}</td><td>{data($l/@level-nivel-niveau)}</td>\r\n" + 
+				"                                    </tr>\r\n" + 
+				"                            }\r\n" + 
+				"                        </table>\r\n" + 
+				"                        <h3>Datos erasmus</h3>\r\n" + 
+				"                        <strong>-Career: </strong>\r\n" + 
+				"                        {$c/career}\r\n" + 
+				"                        <br></br>\r\n" + 
+				"                        <strong> -Course: </strong>\r\n" + 
+				"                        <br>{data($c/career/@course-curso-cours)}</br>\r\n" + 
+				"                        <br></br>\r\n" + 
+				"                        <strong>-Years studying:</strong>\r\n" + 
+				"                        <br>{data($c/career/@yearsstudying-añoscursando-anneesdetudes)}</br>\r\n" + 
+				"                        <br></br>\r\n" + 
+				"                        <strong> -Erasmus places:</strong>\r\n" + 
+				"                        {\r\n" + 
+				"                            for $li in $c/erasmusplaces/place\r\n" + 
+				"                            return\r\n" + 
+				"                                <br>{$li}</br>\r\n" + 
+				"                        }\r\n" + 
+				"                        <br></br>\r\n" + 
+				"                        <strong>-Priority place:</strong>\r\n" + 
+				"                        {$c/priorityplace}\r\n" + 
+				"                        <br></br>\r\n" + 
+				"                        \r\n" + 
+				"                        <h3>Habilidades</h3>\r\n" + 
+				"                        <h4>Skills</h4>\r\n" + 
+				"                        <u>Skill1:</u> <strong> ‏‏‎ </strong>{$c/skillsAndAptitudes/skill1}\r\n" + 
+				"                        <br></br>\r\n" + 
+				"                        <u>Skill2:</u> <strong> ‏‏‎ </strong>{$c/skillsAndAptitudes/skill2}\r\n" + 
+				"                        <br></br>\r\n" + 
+				"                        <u>Skill3:</u> <strong> ‏‏‎ </strong>{$c/skillsAndAptitudes/skill3}\r\n" + 
+				"                        <br></br>\r\n" + 
+				"                         \r\n" + 
+				"                        <h4>Aptitudes</h4>\r\n" + 
+				"                        <u>Aptitude1:</u> <strong> ‏‏‎ </strong>{$c/skillsAndAptitudes/aptitude1}\r\n" + 
+				"                        <br></br>\r\n" + 
+				"                        <u>Aptitude2:</u> <strong> ‏‏‎ </strong>{$c/skillsAndAptitudes/aptitude2}\r\n" + 
+				"                        <br></br>\r\n" + 
+				"                        <u>Aptitude3:</u> <strong> ‏‏‎ </strong>{$c/skillsAndAptitudes/aptitude3}\r\n" + 
+				"                        <br></br>\r\n" + 
+				"                        \r\n" + 
+				"                        <h3>Observations</h3>\r\n" + 
+				"                        {\r\n" + 
+				"                            for $o in $c/obs/child::*\r\n" + 
+				"                            return\r\n" + 
+				"                            <div>\r\n" + 
+				"                                <strong>-{name($o)}: </strong>\r\n" + 
+				"                                {$o/text()}\r\n" + 
+				"                            </div>\r\n" + 
+				"                        }\r\n" + 
+				"  \r\n" + 
+				"         \r\n" + 
+				"                    </div>\r\n" + 
+				"            }\r\n" + 
+				"        </div>\r\n" + 
+				"    </body>\r\n" + 
+				"</html>";
+		
+		xqm.generaXQFichero(xqueryEN, filenameENHTML);
+		
+		String filenamePOMHTML = "output/pomGAICurricula.html";
+		String xqueryPOM = "<html>\r\n" + 
 				"    <title>MAVEN GAICurricula</title>\r\n" + 
 				"    <head>\r\n" +
 				"<meta charset=\"UTF-8\"></meta>" +
@@ -240,7 +370,7 @@ public class Data2html {
 				"    </body>\r\n" + 
 				"</html>";
 		
-		xqm.generaXQFichero(xqueryEN, filenameENHTML);
+		xqm.generaXQFichero(xqueryPOM, filenamePOMHTML);
 		
 	}
 }

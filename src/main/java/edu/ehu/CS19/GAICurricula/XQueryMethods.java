@@ -54,10 +54,14 @@ public class XQueryMethods {
 
 	}
 	
-	public ArrayList<String> consultaListaXQuery(String filename, String xquery) {
-	    
-	    System.out.println("**Fichero de entrada: " + filename);
-	    System.out.println("");
+	/**
+	 * A partir de un XQuery con una referencia a un fichero XML, saca datos que se puedan listar en un ArrayList.
+	 * 
+	 * @param xquery 
+	 * @return result
+	 */
+	public ArrayList<String> consultaListaXQuery(String xquery) {
+	    System.out.println("**Empezando consulta**");
 
 	    ArrayList<String> result = null;
 	    
@@ -81,9 +85,6 @@ public class XQueryMethods {
 	    
 		System.out.println("**Lista creada con éxito**");
 	    return result;
-	    String xqueryString =
-	    "for $x in doc(input/pom.xml)/project/dependencies/dependency " +
-	    "return $x/artifactId/text()";
 	}
 	
 }

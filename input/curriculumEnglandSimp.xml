@@ -1,0 +1,97 @@
+<?xml version="1.0"?> 
+<?oxygen SCHSchema="england.sch"?>
+<curriculums>
+
+    <curriculum  name-nombre-nom="John" img="../imgs/john.jpg"
+        birthday-fnacimiento-datedenaissance="1995-02-25">
+        <surname>Smith</surname>
+        <passport>1234567890GBR1234567U123456788</passport>
+        <DriveLicense>ABCDE12345678AB4ZG 12</DriveLicense>
+        <email>john@gmail.com</email>
+        <address  country-paisOrigen-pays="England">
+            <CPIng>A3R 3AB</CPIng>
+            <region>South East England</region>
+            <province>Cheshire</province>
+            <city>Manchester</city>
+            <street>Abbey Road</street>
+            <doorway>8</doorway>
+            <apartment>2F</apartment>
+        </address>
+        <tlp>+34950677000</tlp>
+        <!-- <mobile>+34950677000</mobile> -->
+        <mothertongues>English</mothertongues>
+        <foreignlanguages>
+            <lng level-nivel-niveau="A2">German</lng>
+            <lng level-nivel-niveau="B2">Spanish</lng>
+        </foreignlanguages>
+        <career yearsstudying-añoscursando-anneesdetudes="5" course-curso-cours="5">Architecture</career>
+        <erasmusplaces>
+            <place>Bilbao</place>
+            <place>Sevilla</place>
+            <place>Madrid</place>
+        </erasmusplaces>
+        <priorityplace>Madrid</priorityplace>
+        <skillsAndAptitudes>
+            <skill1>Trabajo en equipo</skill1>
+            <skill2>Autocad</skill2>
+            <skill3>Diedric draw</skill3>
+            <aptitude1>Adaptabilidad</aptitude1>
+            <aptitude2>Solve problems easily</aptitude2>
+            <aptitude3>creativity</aptitude3>
+        </skillsAndAptitudes>
+        <obs>
+            <hobby>flying drons</hobby>
+            <bestcompetences>Work organization</bestcompetences>
+            <socialcompetences>trabajo en equipo</socialcompetences>
+            <futureplans>go abroad</futureplans>
+            <proyectportfolio>https://www.drive.com/search?q/portfolio</proyectportfolio>
+        </obs>
+    </curriculum>
+
+    <curriculum name-nombre-nom="George" img="../imgs/george.jpg"
+        birthday-fnacimiento-datedenaissance="1995-02-25">
+        <surname>Adams</surname>
+        <passport>1234567890GBR1234567U123456789</passport>
+        <DriveLicense>ABCDE12345678AB4ZG 12</DriveLicense>
+        <email>george@gmail.com</email>
+        <address country-paisOrigen-pays="England">
+            <CPIng>A3R 3AB</CPIng>
+            <region> South West England</region>
+            <province>Bedfordshire</province>
+            <city>Liverpool</city>
+            <street>Savile Row</street>
+            <doorway>12</doorway>
+            <apartment>4E</apartment>
+        </address>
+        <tlp>+34950677000</tlp>
+        <!-- <mobile>+34950677000</mobile> -->
+        <mothertongues>Inglés</mothertongues>
+        <foreignlanguages>
+            <lng level-nivel-niveau="A2">Italian</lng>
+            <lng level-nivel-niveau="B2">Spanish</lng>
+        </foreignlanguages>
+        <career yearsstudying-añoscursando-anneesdetudes="2" course-curso-cours="2">Psicología</career>
+        <erasmusplaces>
+            <place>Bilbao</place>
+            <place>Sevilla</place>
+            <place>Madrid</place>
+        </erasmusplaces>
+        <priorityplace>Bilbao</priorityplace>
+        <skillsAndAptitudes>
+            <aptitude1>Trabajo en equipo</aptitude1>
+            <skill1>Positive attitude</skill1>
+            <aptitude2>Leadership</aptitude2>
+            <skill2>Sociable</skill2>
+            <skill3>Analyze</skill3>
+            <aptitude3>Positive attitude</aptitude3>
+            
+        </skillsAndAptitudes>
+        <obs>
+            <hobby>traveling</hobby>
+            <bestcompetences>Work organization</bestcompetences>
+            <socialcompetences>trabajo en equipo</socialcompetences>
+            <futureplans>go abroad</futureplans>
+            <proyectportfolio>https://www.drive.com/search?q/portfolio</proyectportfolio>
+        </obs>
+    </curriculum>
+</curriculums>
