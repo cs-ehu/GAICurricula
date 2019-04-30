@@ -14,10 +14,10 @@ import javax.xml.xquery.XQResultSequence;
 import net.sf.saxon.xqj.SaxonXQDataSource;
 
 public class XQueryMethods {
-	
+
 	public XQueryMethods() {
 	}
-	
+
 	/**
 	 * Genera un fichero de la extensión que sea a partir de un string con instrucciones de XQuery.
 	 * 
@@ -27,12 +27,12 @@ public class XQueryMethods {
 	public void generaXQFichero(String xQuery, String fn2g) {
 		System.out.println("**Se va a generar el fichero: " + fn2g + "**");
 		XQDataSource xqs = new SaxonXQDataSource();
-		
+
 		try {
 			XQConnection conn = xqs.getConnection();
 			XQExpression xqe = conn.createExpression();
 			XQResultSequence rs = xqe.executeQuery(xQuery);
-			
+
 			BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(fn2g));
 
 			while (rs.next()) {
@@ -53,14 +53,17 @@ public class XQueryMethods {
 		System.out.println("**Fichero generado con Éxito**");
 
 	}
-	
+
 	/**
 	 * Genera un fichero de la extensión que sea a partir de la raíz de un XML de un pom y una ruta de destino.
 	 * 
 	 * @param inFile String fichero de entrada xml
 	 * @param fn2g String fichero a generar
+	 * @throws XQException Exception se lanza cuando se presenta un error con la instrucción XQuery.
+	 * @throws IOException Exception se lanza cuando se presenta un error escribiendo un fichero.
 	 */
-	public void generaXQPOM(String inFile, String fn2g) {
+	public void generaXQPOM(String inFile, String fn2g) throws XQException, IOException {
+		inFile = inFile.replace("\\", "/");
 		System.out.println("**Se va a generar el fichero: " + fn2g + "**");
 		XQDataSource xqs = new SaxonXQDataSource();
 		String xQuery = "<html>\r\n" + 
@@ -72,7 +75,7 @@ public class XQueryMethods {
 				"    <body>\r\n" + 
 				"        <h3>Artefacto</h3>\r\n" + 
 				"        {\r\n" + 
-				"                for $p in doc(\"" + inFile + "\")/project\r\n" + 
+				"                for $p in doc(\"file:///" + inFile + "\")/project\r\n" + 
 				"                return\r\n" + 
 				"                    <div id=\"all-page\">\r\n" + 
 				"                        <div id=\"artifact\">\r\n" + 
@@ -134,33 +137,26 @@ public class XQueryMethods {
 				"        }\r\n" + 
 				"    </body>\r\n" + 
 				"</html>";
-		
-		try {
-			XQConnection conn = xqs.getConnection();
-			XQExpression xqe = conn.createExpression();
-			XQResultSequence rs = xqe.executeQuery(xQuery);
-			
-			BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(fn2g));
 
-			while (rs.next()) {
-				String aline = rs.getItemAsString(null);
-				bufferedWriter.write(aline);
-				bufferedWriter.newLine();
-			}
+		XQConnection conn = xqs.getConnection();
+		XQExpression xqe = conn.createExpression();
+		XQResultSequence rs = xqe.executeQuery(xQuery);
 
-			bufferedWriter.close();
-			conn.close();
-		} catch (XQException e) {
-			System.err.println("**Error inicializando la escritura del fichero con xquery** ver más:");
-			e.printStackTrace();
-		} catch (IOException ex) {
-			System.err.println("**Error en la escritura del fichero '" + fn2g + "'**");
+		BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(fn2g));
+
+		while (rs.next()) {
+			String aline = rs.getItemAsString(null);
+			bufferedWriter.write(aline);
+			bufferedWriter.newLine();
 		}
+
+		bufferedWriter.close();
+		conn.close();
 
 		System.out.println("**Fichero generado con Éxito**");
 
 	}
-	
+
 	/**
 	 * A partir de un XQuery con una referencia a un fichero XML, saca datos que se puedan listar en un ArrayList.
 	 * 
@@ -168,30 +164,30 @@ public class XQueryMethods {
 	 * @return result
 	 */
 	public ArrayList<String> consultaListaXQuery(String xquery) {
-	    System.out.println("**Empezando consulta**");
+		System.out.println("**Empezando consulta**");
 
-	    ArrayList<String> result = null;
-	    
+		ArrayList<String> result = null;
+
 		try {
-		    XQDataSource xqs = new SaxonXQDataSource(); 
+			XQDataSource xqs = new SaxonXQDataSource(); 
 			XQConnection conn = xqs.getConnection();
 			XQExpression xqe = conn.createExpression();
-			
-		    XQResultSequence rs = xqe.executeQuery(xquery);
-		    
-		    result = new ArrayList<String>();
 
-		    while(rs.next())
-		      result.add(rs.getItemAsString(null));
-		    
-		    conn.close();
+			XQResultSequence rs = xqe.executeQuery(xquery);
+
+			result = new ArrayList<String>();
+
+			while(rs.next())
+				result.add(rs.getItemAsString(null));
+
+			conn.close();
 		} catch (XQException e) {
 			System.err.println("**Error en la consulta**");
 			e.printStackTrace();
 		}
-	    
+
 		System.out.println("**Lista creada con éxito**");
-	    return result;
+		return result;
 	}
-	
+
 }

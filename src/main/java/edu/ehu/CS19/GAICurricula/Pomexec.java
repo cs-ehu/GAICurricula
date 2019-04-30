@@ -1,5 +1,6 @@
 package edu.ehu.CS19.GAICurricula;
 
+import java.awt.Desktop;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -10,11 +11,13 @@ import javax.swing.JOptionPane;
 
 import java.awt.FlowLayout;
 import javax.swing.JTextField;
+import javax.xml.xquery.XQException;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
 
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.io.IOException;
 import java.awt.event.ActionEvent;
 import java.awt.Toolkit;
 import java.awt.event.WindowAdapter;
@@ -56,6 +59,7 @@ public class Pomexec {
 	private void initialize() {
 		XQueryMethods xqm = new XQueryMethods();
 		frmHtmlpom = new JFrame();
+		frmHtmlpom.setIconImage(Toolkit.getDefaultToolkit().getImage(System.getProperty("user.dir") + "\\imgs\\app.png"));
 		frmHtmlpom.addWindowListener(new WindowAdapter() {
 			@Override
 			public void windowClosing(WindowEvent arg0) {
@@ -66,6 +70,10 @@ public class Pomexec {
 				if (confirmed == JOptionPane.YES_OPTION) {
 					System.exit(0);
 				}
+			}
+			@Override
+			public void windowOpened(WindowEvent arg0) {
+				JOptionPane.showMessageDialog(null, "¡Bienvenido! antes de continuar, recuerde borrar todos los atributos de la etiqueta pom. \n -Software creado por: @FosterGun");
 			}
 		});
 
@@ -111,9 +119,28 @@ public class Pomexec {
 		btnProcesarPom.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(pomField.getText().isEmpty() || htmlField.getText().isEmpty() || fileHTMLField.getText().isEmpty()) {
-					
+					JOptionPane.showMessageDialog(null,
+						    "El usuario debe rellenar todos los campos para poder \nproducir el HTML con la información del POM.",
+						    "Rellene todos los campos",
+						    JOptionPane.WARNING_MESSAGE);
 				} else {
-					
+					try {
+						xqm.generaXQPOM(pomField.getText().toString(), htmlField.getText().toString() + "\\" + fileHTMLField.getText().toString());
+						int confirmed = JOptionPane.showConfirmDialog(null, 
+								"¡El fichero HTML ha sido generado con éxito! \n¿Desea verlo? si presiona sí se le abrirá.", "¡Archivo HTML generado!",
+								JOptionPane.YES_NO_OPTION);
+
+						if (confirmed == JOptionPane.YES_OPTION) {
+							Desktop desktop = Desktop.getDesktop();
+					        File file = new File(htmlField.getText().toString() + "//" + fileHTMLField.getText().toString());
+					        if(file.exists()) desktop.open(file);
+						}
+					} catch(XQException | IOException ex2) {
+						JOptionPane.showMessageDialog(null,
+							    "No se ha generado el fichero HTML. \nEl usuario debe rellenar todos los campos adecuadamente.",
+							    "Error",
+							    JOptionPane.ERROR_MESSAGE);
+					}
 				}
 			}
 		});
