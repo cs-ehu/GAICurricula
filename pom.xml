@@ -7,7 +7,7 @@
 
 	<groupId>edu.ehu.CS19</groupId>
 	<artifactId>GAICurricula</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.1</version>
 	<packaging>jar</packaging>
 
 	<name>GAICurricula</name>
