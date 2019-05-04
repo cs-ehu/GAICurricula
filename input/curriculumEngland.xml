@@ -1,97 +1,105 @@
 <?xml version="1.0"?> 
 <?oxygen SCHSchema="england.sch"?>
-<curriculums xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:erasE="http://www.erasmusENGLAND.org" xmlns="http://www.erasmus.org"
-    xsi:schemaLocation="http://www.erasmus.org erasmus.xsd http://www.erasmusENGLAND.org inglaterra.xsd">
+<curriculums
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:erasE="http://www.erasmusENGLAND.org"
+	xmlns="http://www.erasmus.org"
+	xsi:schemaLocation="http://www.erasmus.org erasmus.xsd http://www.erasmusENGLAND.org inglaterra.xsd">
 
-    <curriculum xsi:type="erasE:ErasFT" name-nombre-nom="John" img="../imgs/john.jpg"
-        birthday-fnacimiento-datedenaissance="1995-02-25">
-        <surname>Smith</surname>
-        <passport>1234567890GBR1234567U123456788</passport>
-        <DriveLicense>ABCDE12345678AB4ZG 12</DriveLicense>
-        <email>john@gmail.com</email>
-        <address xsi:type="erasE:AddressING" country-paisOrigen-pays="Spain">
-            <CPIng>A3R 3AB</CPIng>
-            <region>South East England</region>
-            <province>Cheshire</province>
-            <city>Manchester</city>
-            <street>Abbey Road</street>
-            <doorway>8</doorway>
-            <apartment>2F</apartment>
-        </address>
-        <tlp>+34950677000</tlp>
-        <mothertongues>Inglés</mothertongues>
-        <foreignlanguages>
-            <lng level-nivel-niveau="A2">German</lng>
-            <lng level-nivel-niveau="B2">Spanish</lng>
-        </foreignlanguages>
-        <career yearsstudying-añoscursando-anneesdetudes="2" course-curso-cours="5">Architecture</career>
-        <erasmusplaces xsi:type="erasE:PlacesING">
-            <place>Bilbao</place>
-            <place>Sevilla</place>
-            <place>Madrid</place>
-        </erasmusplaces>
-        <priorityplace>Madrid</priorityplace>
-        <erasE:skillsAndAptitudes>
-            <erasE:skill1>Trabajo en equipo</erasE:skill1>
-            <erasE:skill2>Autocad</erasE:skill2>
-            <erasE:skill3>Diedric draw</erasE:skill3>
-            <erasE:aptitude1>Adaptabilidad</erasE:aptitude1>
-            <erasE:aptitude2>Solve problems easily</erasE:aptitude2>
-            <erasE:aptitude3>creativity</erasE:aptitude3>
-        </erasE:skillsAndAptitudes>
-        <erasE:obs>
-            <erasE:hobby>flying drons</erasE:hobby>
-            <erasE:bestcompetences>Work organization</erasE:bestcompetences>
-            <erasE:socialcompetences>trabajo en equipo</erasE:socialcompetences>
-            <erasE:futureplans>go abroad</erasE:futureplans>
-            <erasE:proyectportfolio>https://www.drive.com/search?q/portfolio</erasE:proyectportfolio>
-        </erasE:obs>
-    </curriculum>
+	<curriculum xsi:type="erasE:ErasFT" name-nombre-nom="John"
+		img="../imgs/john.jpg"
+		birthday-fnacimiento-datedenaissance="1995-02-25">
+		<surname>Smith</surname>
+		<passport>1234567890GBR1234567U123456788</passport>
+		<DriveLicense>ABCDE12345678AB4ZG 12</DriveLicense>
+		<email>john@gmail.com</email>
+		<address xsi:type="erasE:AddressING"
+			country-paisOrigen-pays="Spain">
+			<CPIng>A3R 3AB</CPIng>
+			<region>South East England</region>
+			<province>Cheshire</province>
+			<city>Manchester</city>
+			<street>Abbey Road</street>
+			<doorway>8</doorway>
+			<apartment>2F</apartment>
+		</address>
+		<tlp>+34950677000</tlp>
+		<mothertongues>Inglés</mothertongues>
+		<foreignlanguages>
+			<lng level-nivel-niveau="A2">German</lng>
+			<lng level-nivel-niveau="B2">Spanish</lng>
+		</foreignlanguages>
+		<career yearsstudying-añoscursando-anneesdetudes="2"
+			course-curso-cours="5">Architecture</career>
+		<erasmusplaces xsi:type="erasE:PlacesING">
+			<place>Bilbao</place>
+			<place>Sevilla</place>
+			<place>Madrid</place>
+		</erasmusplaces>
+		<priorityplace>Madrid</priorityplace>
+		<erasE:skillsAndAptitudes>
+			<erasE:skill1>Trabajo en equipo</erasE:skill1>
+			<erasE:skill2>Autocad</erasE:skill2>
+			<erasE:skill3>Diedric draw</erasE:skill3>
+			<erasE:aptitude1>Adaptabilidad</erasE:aptitude1>
+			<erasE:aptitude2>Solve problems easily</erasE:aptitude2>
+			<erasE:aptitude3>creativity</erasE:aptitude3>
+		</erasE:skillsAndAptitudes>
+		<erasE:obs>
+			<erasE:hobby>flying drons</erasE:hobby>
+			<erasE:bestcompetences>Work organization</erasE:bestcompetences>
+			<erasE:socialcompetences>trabajo en equipo</erasE:socialcompetences>
+			<erasE:futureplans>go abroad</erasE:futureplans>
+			<erasE:proyectportfolio>https://www.drive.com/search?q/portfolio</erasE:proyectportfolio>
+		</erasE:obs>
+	</curriculum>
 
-    <curriculum xsi:type="erasE:ErasFT" name-nombre-nom="George" img="../imgs/george.jpg"
-        birthday-fnacimiento-datedenaissance="1995-02-25">
-        <surname>Adams</surname>
-        <passport>1234567890GBR1234567U123456789</passport>
-        <DriveLicense>ABCDE12345678AB4ZG 12</DriveLicense>
-        <email>george@gmail.com</email>
-        <address xsi:type="erasE:AddressING" country-paisOrigen-pays="Spain">
-            <CPIng>A3R 3AB</CPIng>
-            <region> South West England</region>
-            <province>Bedfordshire</province>
-            <city>Liverpool</city>
-            <street>Savile Row</street>
-            <doorway>12</doorway>
-            <apartment>4E</apartment>
-        </address>
-        <tlp>+34950677000</tlp>
-        <mothertongues>Inglés</mothertongues>
-        <foreignlanguages>
-            <lng level-nivel-niveau="A2">Italian</lng>
-            <lng level-nivel-niveau="B2">Spanish</lng>
-        </foreignlanguages>
-        <career yearsstudying-añoscursando-anneesdetudes="2" course-curso-cours="2">Psicología</career>
-        <erasmusplaces xsi:type="erasE:PlacesING">
-            <place>Bilbao</place>
-            <place>Sevilla</place>
-            <place>Madrid</place>
-        </erasmusplaces>
-        <priorityplace>Bilbao</priorityplace>
-        <erasE:skillsAndAptitudes>
-            <erasE:aptitude1>Trabajo en equipo</erasE:aptitude1>
-            <erasE:skill1>Positive attitude</erasE:skill1>
-            <erasE:aptitude2>Leadership</erasE:aptitude2>
-            <erasE:skill2>Sociable</erasE:skill2>
-            <erasE:skill3>Analyze</erasE:skill3>
-            <erasE:aptitude3>Positive attitude</erasE:aptitude3>
+	<curriculum xsi:type="erasE:ErasFT" name-nombre-nom="George"
+		img="../imgs/george.jpg"
+		birthday-fnacimiento-datedenaissance="1995-02-25">
+		<surname>Adams</surname>
+		<passport>1234567890GBR1234567U123456789</passport>
+		<DriveLicense>ABCDE12345678AB4ZG 12</DriveLicense>
+		<email>george@gmail.com</email>
+		<address xsi:type="erasE:AddressING"
+			country-paisOrigen-pays="Spain">
+			<CPIng>A3R 3AB</CPIng>
+			<region> South West England</region>
+			<province>Bedfordshire</province>
+			<city>Liverpool</city>
+			<street>Savile Row</street>
+			<doorway>12</doorway>
+			<apartment>4E</apartment>
+		</address>
+		<tlp>+34950677000</tlp>
+		<mothertongues>Inglés</mothertongues>
+		<foreignlanguages>
+			<lng level-nivel-niveau="A2">Italian</lng>
+			<lng level-nivel-niveau="B2">Spanish</lng>
+		</foreignlanguages>
+		<career yearsstudying-añoscursando-anneesdetudes="2"
+			course-curso-cours="2">Psicología</career>
+		<erasmusplaces xsi:type="erasE:PlacesING">
+			<place>Bilbao</place>
+			<place>Sevilla</place>
+			<place>Madrid</place>
+		</erasmusplaces>
+		<priorityplace>Bilbao</priorityplace>
+		<erasE:skillsAndAptitudes>
+			<erasE:aptitude1>Trabajo en equipo</erasE:aptitude1>
+			<erasE:skill1>Positive attitude</erasE:skill1>
+			<erasE:aptitude2>Leadership</erasE:aptitude2>
+			<erasE:skill2>Sociable</erasE:skill2>
+			<erasE:skill3>Analyze</erasE:skill3>
+			<erasE:aptitude3>Positive attitude</erasE:aptitude3>
 
-        </erasE:skillsAndAptitudes>
-        <erasE:obs>
-            <erasE:hobby>traveling</erasE:hobby>
-            <erasE:bestcompetences>Work organization</erasE:bestcompetences>
-            <erasE:socialcompetences>trabajo en equipo</erasE:socialcompetences>
-            <erasE:futureplans>go abroad</erasE:futureplans>
-            <erasE:proyectportfolio>https://www.drive.com/search?q/portfolio</erasE:proyectportfolio>
-        </erasE:obs>
-    </curriculum>
+		</erasE:skillsAndAptitudes>
+		<erasE:obs>
+			<erasE:hobby>traveling</erasE:hobby>
+			<erasE:bestcompetences>Work organization</erasE:bestcompetences>
+			<erasE:socialcompetences>trabajo en equipo</erasE:socialcompetences>
+			<erasE:futureplans>go abroad</erasE:futureplans>
+			<erasE:proyectportfolio>https://www.drive.com/search?q/portfolio</erasE:proyectportfolio>
+		</erasE:obs>
+	</curriculum>
 </curriculums>
