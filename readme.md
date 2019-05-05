@@ -4,8 +4,8 @@
 1. [Introducción](#1-introducción)
 2. [Requisitos para la aplicación](#2-requisitos-para-la-aplicación)
 3. [Instalación y uso de la aplicación](#3-instalación-y-uso-de-la-aplicación)
-	3.1. [Instalación y otras utilidades a comentar](#instalación-y-otras-utilidades-a-comentar)
-	3.2. [Uso de la aplicación](#uso-de-la-aplicación)
+3.1. [Instalación y otras utilidades a comentar](#instalación-y-otras-utilidades-a-comentar)
+3.2. [Uso de la aplicación](#uso-de-la-aplicación)
 4. [Estructura del proyecto](#4-estructura-del-proyecto)
 5. [Licencia](#5-licencia)
 6. [Autoría](#6-autoría)
@@ -32,7 +32,7 @@ El ejecutable y lo generado estará en la carpeta *target*, en el caso de que se
 ```
 mvn clean
 ```
-
+En caso de no querer instalarla, puede encontrar una versión portable [aquí](https://github.com/cs-ehu/GAICurricula/releases/tag/1.0.1).
 ### Uso de la aplicación
 Después de comentar lo referente a la instalación de la aplicación, toca su ejecución. El uso de la aplicación es muy sencillo y lo explicaremos a continuación en unos cuantos pasos.
 
