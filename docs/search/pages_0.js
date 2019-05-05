@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['wsruralhouse_20jsf',['WSRuralHouse JSF',['../index.html',1,'']]]
+  ['gaicurricula',['GAICurricula',['../index.html',1,'']]]
 ];

@@ -1,6 +1,14 @@
 # GAICurricula
 
 ## Índice
+1. [Introducción](#1-introducción)
+2. [Requisitos para la aplicación](#2-requisitos-para-la-aplicación)
+3. [Instalación y uso de la aplicación](#3-instalación-y-uso-de-la-aplicación)
+	3.1. [Instalación y otras utilidades a comentar](#instalación-y-otras-utilidades-a-comentar)
+	3.2. [Uso de la aplicación](#uso-de-la-aplicación)
+4. [Estructura del proyecto](#4-estructura-del-proyecto)
+5. [Licencia](#5-licencia)
+6. [Autoría](#6-autoría)
 
 ## 1. Introducción
 GAICurricula es un proyecto que nació en una asignatura llamada Gestión Avanzada de la Información, en la cual la mayor parte de su tiempo se dedica a estudiar tecnologías para XML.
@@ -144,8 +152,8 @@ C:\Users\Michel\workspace\GAICurricula
 ## 5. Licencia
 La licencia utilizada para este proyecto es la **GNU General Public License v3.0**.
 Esta licencia permite en la aplicación su uso comercial, su modificación, su distribución, su uso privado y el poder ser patentada.
-Para más información sobre la licencia de este proyecto, haga click en [LICENSE](LICENSE).
+Para más información sobre la licencia de este proyecto, haga click en [LICENSE](https://github.com/FosterGun/GAICurricula/blob/FosterGun/LICENSE).
 
 ## 6. Autoría
-Toda la autoría de este proyecto corre a manos de [FosterGun](https://github.com/FerMod).
-Si se desea contactar con él puede hacerlo a través de GitHub o a través de su [correo eléctronico](mailto:mblanco040@ikasle.ehu.es)
+Toda la autoría de este proyecto corre a manos de [FosterGun](https://github.com/FosterGun).
+Si se desea contactar con él puede hacerlo a través de GitHub o a través de su [correo eléctronico](mailto:mblanco040@ikasle.ehu.es).

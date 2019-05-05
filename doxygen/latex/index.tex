@@ -1,3 +1,72 @@
+
+\begin{DoxyEnumerate}
+\item \href{\#1-introducción}{\texttt{ Introducción}}
+\item \href{\#2-requisitos-para-la-aplicación}{\texttt{ Requisitos para la aplicación}}
+\item \href{\#3-instalación-y-uso-de-la-aplicación}{\texttt{ Instalación y uso de la aplicación}} 3.\+1. \href{\#instalación-y-otras-utilidades-a-comentar}{\texttt{ Instalación y otras utilidades a comentar}} 3.\+2. \href{\#uso-de-la-aplicación}{\texttt{ Uso de la aplicación}}
+\item \href{\#4-estructura-del-proyecto}{\texttt{ Estructura del proyecto}}
+\item \href{\#5-licencia}{\texttt{ Licencia}}
+\item \href{\#6-autoría}{\texttt{ Autoría}}
+\end{DoxyEnumerate}
+
+G\+A\+I\+Curricula es un proyecto que nació en una asignatura llamada Gestión Avanzada de la Información, en la cual la mayor parte de su tiempo se dedica a estudiar tecnologías para X\+ML.
+
+Entre ellas, una de las claves fue X\+Query, tecnología que debía ser parte de un entregable del mismo proyecto. Este era un entregable básico que unicamente consistía en a través de un solo fichero java, generar ficheros H\+T\+ML con información de X\+ML sobre curriculums. A partir de aquí y ya con lo básico, se tuvo la idea de extenderlo y adaptar todo esto a M\+A\+V\+EN.
+
+Su extensión fue a raíz de creer que había potencial para hacer algo más complejo con estas herramientas, dando así como fruto Pom\+H\+T\+ML, una aplicación de escritorio que permite crear un H\+T\+ML básico con toda la información de un pom de un proyecto Java. En pasos posteriores explicaremos como es su instalación y su uso.
+
+Para esta aplicación se necesita unicámente tener {\bfseries{J\+DK 1.\+8}} y {\bfseries{M\+A\+V\+EN}} instalados.
+
+La instalación del proyecto es sencilla, tan solo hace falta una vez importado el proyecto realizar la siguiente instrucción en una ventana de comandos. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mvn clean package assembly:single}
+\end{DoxyCode}
+ Esta instrucción nos limpiará lo que pudimos hacer anteriormente en el proyecto con instrucciones M\+A\+V\+EN y nos realizará lo que antes hacía en la fase package, pero con la diferencia de que también nos creará el jar ejecutable para utilizar la aplicación. El ejecutable y lo generado estará en la carpeta {\itshape target}, en el caso de que se quiera desinstalar la aplicación será tan fácil como escribir lo siguiente. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mvn clean}
+\end{DoxyCode}
+
+
+Después de comentar lo referente a la instalación de la aplicación, toca su ejecución. El uso de la aplicación es muy sencillo y lo explicaremos a continuación en unos cuantos pasos.
+
+
+\begin{DoxyEnumerate}
+\item Después de instalar la aplicación, el siguiente paso es ejecutarla, para ello clicamos dos veces en el jar generado y se nos mostrará la pantalla siguiente, dándonos la bienvenida a la aplicación.
+\end{DoxyEnumerate}
+
+
+
+Este primer punto que nos muestra es importante, ya que debido a un problema por resolver de esta fase temprana del proyecto se pide al usuario que de su fichero pom.\+xml le borre de la etiqueta pom todos sus atributos. Una vez se haga esto y aceptemos la notificación, pasamos al segundo paso.
+
+
+
+
+\begin{DoxyEnumerate}
+\item Teniendo ya la aplicación lista para usarse, el siguiente paso será examinar y referenciar donde se encuentra nuestro pom, examinar y referenciar donde guardar el fichero H\+T\+ML y por último dar nombre al fichero H\+T\+ML que se va a generar.
+\end{DoxyEnumerate}
+
+
+
+
+
+Aquí hemos dejado un campo sin rellenar para comprobar la notificación que nos saldría si por algún casual nos hemos dejado información, en el caso de rellenar mal estos campos y darle al botón \char`\"{}\+Procesar P\+O\+M\char`\"{} también nos elevará una advertencia para qhe rellenemos correctamente los campos, la aplicación ejecuta todo tipo de comprobaciones para ejecutarse correctamente.
+
+
+\begin{DoxyEnumerate}
+\item Una vez rellenemos correctamente los campos de la aplicación sin dejarnos ningún campo en blanco, ejecutaremos de nuevo.
+\end{DoxyEnumerate}
+
+
+
+Después de ejecutar nos abrirá la siguiente ventana en caso de que queramos ver el H\+T\+ML generado.
+
+
+
+Para este caso nos interesa, así que le daremos que sí y a través de la aplicación que nosotros hayamos definido para abrir los ficheros H\+T\+ML, se ejecutará mostrándonos el fichero, en nuestro caso pusimos el navegador para verlo de una manera gráfica. El fichero H\+T\+ML generado por la aplicación siempre será de este estilo.
+
+
+
+Y con todo esto dicho, así es el uso de está aplicación.
+
 El árbol de estructura general de este proyecto es la siguiente\+:
 
 
@@ -79,4 +148,8 @@ El árbol de estructura general de este proyecto es la siguiente\+:
 \DoxyCodeLine{}
 \DoxyCodeLine{31 directories, 41 files}
 \end{DoxyCode}
- 
+
+
+La licencia utilizada para este proyecto es la {\bfseries{G\+NU General Public License v3.\+0}}. Esta licencia permite en la aplicación su uso comercial, su modificación, su distribución, su uso privado y el poder ser patentada. Para más información sobre la licencia de este proyecto, haga click en \href{https://github.com/FosterGun/GAICurricula/blob/FosterGun/LICENSE}{\texttt{ L\+I\+C\+E\+N\+SE}}.
+
+Toda la autoría de este proyecto corre a manos de \href{https://github.com/FosterGun}{\texttt{ Foster\+Gun}}. Si se desea contactar con él puede hacerlo a través de Git\+Hub o a través de su \href{mailto:mblanco040@ikasle.ehu.es}{\texttt{ correo eléctronico}}. 
