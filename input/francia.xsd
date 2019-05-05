@@ -1,120 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:eras="http://www.erasmus.org"
-    xmlns:erasF="http://www.erasmusFRANCE.org" elementFormDefault="qualified"
-    targetNamespace="http://www.erasmusFRANCE.org">
-    <xsd:import namespace="http://www.erasmus.org" schemaLocation="erasmus.xsd"/>
-    <xsd:complexType name="AuxT">
-        <xsd:complexContent>
-            <xsd:restriction base="eras:CurriT">
-                <xsd:sequence>
-					<xsd:element ref="eras:prenom"/>
-                	<xsd:element ref="eras:passeport"/>
-                	<xsd:element ref="eras:CNI"/>
-                	<xsd:element ref="eras:email"/>
-                	<xsd:element ref="eras:addresse"/>
-                	<xsd:choice>
-                		<xsd:element ref="eras:tlfne"/>
-                		<xsd:element ref="eras:mobile"/>
-                	</xsd:choice>
-                    <xsd:element ref="eras:languematernelle"/>
-                	<xsd:element ref="eras:languesetrangeres"/>
-                	<xsd:element ref="eras:carriere"/>
-                	<xsd:element ref="eras:erasmusendroits"/>
-                	<xsd:element ref="eras:lieuprioritaire"/>
-                </xsd:sequence>
-            </xsd:restriction>    
-        </xsd:complexContent>
-    </xsd:complexType>
-	
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:eras="http://www.erasmus.org"
+	xmlns:erasF="http://www.erasmusFRANCE.org"
+	elementFormDefault="qualified"
+	targetNamespace="http://www.erasmusFRANCE.org">
+	<xsd:import namespace="http://www.erasmus.org"
+		schemaLocation="erasmus.xsd" />
+	<xsd:complexType name="AuxT">
+		<xsd:complexContent>
+			<xsd:restriction base="eras:CurriT">
+				<xsd:sequence>
+					<xsd:element ref="eras:prenom" />
+					<xsd:element ref="eras:passeport" />
+					<xsd:element ref="eras:CNI" />
+					<xsd:element ref="eras:email" />
+					<xsd:element ref="eras:addresse" />
+					<xsd:choice>
+						<xsd:element ref="eras:tlfne" />
+						<xsd:element ref="eras:mobile" />
+					</xsd:choice>
+					<xsd:element ref="eras:languematernelle" />
+					<xsd:element ref="eras:languesetrangeres" />
+					<xsd:element ref="eras:carriere" />
+					<xsd:element ref="eras:erasmusendroits" />
+					<xsd:element ref="eras:lieuprioritaire" />
+				</xsd:sequence>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+
 	<xsd:complexType name="ErasFT">
 		<xsd:complexContent>
 			<xsd:extension base="erasF:AuxT">
 				<xsd:sequence>
-					<xsd:element name="travail" type="erasF:TravailT"/>
-					<xsd:element name="notes" type="erasF:NotesT"/>
-					<xsd:element name="realisation" type="erasF:ReaT" minOccurs="0"/>
-					<xsd:element name="obs" type="erasF:ObservacionesT"/>					
+					<xsd:element name="travail" type="erasF:TravailT" />
+					<xsd:element name="notes" type="erasF:NotesT" />
+					<xsd:element name="realisation" type="erasF:ReaT"
+						minOccurs="0" />
+					<xsd:element name="obs" type="erasF:ObservacionesT" />
 				</xsd:sequence>
-			</xsd:extension>    
+			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	
+
 	<xsd:complexType name="ReaT">
 		<xsd:sequence minOccurs="1" maxOccurs="3">
-			<xsd:element name="realisationatteint" type="xsd:string"/>
+			<xsd:element name="realisationatteint" type="xsd:string" />
 		</xsd:sequence>
 	</xsd:complexType>
-	
+
 	<xsd:complexType name="ObservacionesT">
 		<xsd:sequence minOccurs="0" maxOccurs="6">
 			<xsd:any namespace="##any" minOccurs="0" />
 		</xsd:sequence>
 	</xsd:complexType>
-	
+
 	<xsd:complexType name="NotesT">
 		<xsd:sequence maxOccurs="4">
-			<xsd:element name="meilleurenote" type="erasF:NoteT"/>
+			<xsd:element name="meilleurenote" type="erasF:NoteT" />
 		</xsd:sequence>
-		<xsd:attribute name="notemoyenne" type="xsd:nonNegativeInteger"/>
+		<xsd:attribute name="notemoyenne"
+			type="xsd:nonNegativeInteger" />
 	</xsd:complexType>
-	
+
 	<xsd:complexType name="NoteT">
 		<xsd:sequence>
 			<xsd:element name="codeetudiant">
 				<xsd:simpleType>
 					<xsd:restriction base="xsd:string">
-						<xsd:pattern value="[0-9]{5,8}(AB|CD|EF)[0-9]{2}[A-Z]?"/>
+						<xsd:pattern
+							value="[0-9]{5,8}(AB|CD|EF)[0-9]{2}[A-Z]?" />
 					</xsd:restriction>
 				</xsd:simpleType>
 			</xsd:element>
-			<xsd:element name="notemoyenne" type="xsd:nonNegativeInteger"/>
+			<xsd:element name="notemoyenne"
+				type="xsd:nonNegativeInteger" />
 		</xsd:sequence>
-		<xsd:attribute name="cours" type="xsd:string"/>
+		<xsd:attribute name="cours" type="xsd:string" />
 	</xsd:complexType>
-	
+
 	<xsd:complexType name="TravailT">
 		<xsd:sequence maxOccurs="5">
-			<xsd:element name="occupation" type="erasF:OcupFT"/>
+			<xsd:element name="occupation" type="erasF:OcupFT" />
 		</xsd:sequence>
 	</xsd:complexType>
-	
+
 	<xsd:complexType name="OcupFT">
 		<xsd:sequence>
-			<xsd:element name="datededébut" type="xsd:date"/>
-			<xsd:element name="datedefin" type="xsd:date"/>
-			<xsd:element name="description" type="xsd:string"/>
-			<xsd:element name="entreprise" type="xsd:string"/>
+			<xsd:element name="datededébut" type="xsd:date" />
+			<xsd:element name="datedefin" type="xsd:date" />
+			<xsd:element name="description" type="xsd:string" />
+			<xsd:element name="entreprise" type="xsd:string" />
 			<xsd:choice>
-				<xsd:element name="tempsconsacré" type="xsd:nonNegativeInteger"/>
-				<xsd:element name="produit" type="xsd:string"/>
+				<xsd:element name="tempsconsacré"
+					type="xsd:nonNegativeInteger" />
+				<xsd:element name="produit" type="xsd:string" />
 			</xsd:choice>
 		</xsd:sequence>
-		<xsd:attribute name="poste" type="xsd:string"/>
-		<xsd:attribute name="lieudetravail" type="xsd:string"/>
+		<xsd:attribute name="poste" type="xsd:string" />
+		<xsd:attribute name="lieudetravail" type="xsd:string" />
 		<xsd:attribute name="typedetravail">
 			<xsd:simpleType>
 				<xsd:restriction base="xsd:string">
-					<xsd:enumeration value="Pratiques rémunérées"/>
-					<xsd:enumeration value="Pratiques non rémunérées"/>
-					<xsd:enumeration value="Travail normal"/>
+					<xsd:enumeration value="Pratiques rémunérées" />
+					<xsd:enumeration value="Pratiques non rémunérées" />
+					<xsd:enumeration value="Travail normal" />
 				</xsd:restriction>
 			</xsd:simpleType>
 		</xsd:attribute>
 	</xsd:complexType>
-	
+
 	<xsd:complexType name="AddresseFT">
 		<xsd:complexContent>
 			<xsd:restriction base="eras:DireccionT">
 				<xsd:sequence>
-					<xsd:element ref="eras:CPFr"/>
-					<xsd:element ref="eras:region"/>
-					<xsd:element ref="eras:province"/>
-					<xsd:element ref="eras:ville"/>
-					<xsd:element ref="eras:rue"/>
-					<xsd:element ref="eras:portail"/>
-					<xsd:element ref="eras:appartement"/>
+					<xsd:element ref="eras:CPFr" />
+					<xsd:element ref="eras:region" />
+					<xsd:element ref="eras:province" />
+					<xsd:element ref="eras:ville" />
+					<xsd:element ref="eras:rue" />
+					<xsd:element ref="eras:portail" />
+					<xsd:element ref="eras:appartement" />
 				</xsd:sequence>
-			</xsd:restriction>    
+			</xsd:restriction>
 		</xsd:complexContent>
 	</xsd:complexType>
 
@@ -122,16 +130,17 @@
 		<xsd:complexContent>
 			<xsd:restriction base="eras:LugaresT">
 				<xsd:sequence minOccurs="1" maxOccurs="6">
-					<xsd:element ref="eras:lieu"  />
+					<xsd:element ref="eras:lieu" />
 				</xsd:sequence>
-			</xsd:restriction>    
+			</xsd:restriction>
 		</xsd:complexContent>
 	</xsd:complexType>
-	
-	<xsd:element name="attitude" type="xsd:string"/>
-	<xsd:element name="loisirs" type="xsd:string"/>
-	<xsd:element name="competences" type="xsd:string"/>
-	<xsd:element name="competencessociales" type="xsd:string"/>
-	<xsd:element name="plansfuturs" type="xsd:string"/>
-	<xsd:element name="pportefeuilledeprojects" type="xsd:string"/>
+
+	<xsd:element name="attitude" type="xsd:string" />
+	<xsd:element name="loisirs" type="xsd:string" />
+	<xsd:element name="competences" type="xsd:string" />
+	<xsd:element name="competencessociales" type="xsd:string" />
+	<xsd:element name="plansfuturs" type="xsd:string" />
+	<xsd:element name="pportefeuilledeprojects"
+		type="xsd:string" />
 </xsd:schema>
