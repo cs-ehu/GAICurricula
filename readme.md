@@ -4,8 +4,6 @@
 1. [Introducción](#1-introducción)
 2. [Requisitos para la aplicación](#2-requisitos-para-la-aplicación)
 3. [Instalación y uso de la aplicación](#3-instalación-y-uso-de-la-aplicación)
-  3.1. [Instalación y otras utilidades a comentar](#instalación-y-otras-utilidades-a-comentar)
-  3.2. [Uso de la aplicación](#uso-de-la-aplicación)
 4. [Estructura del proyecto](#4-estructura-del-proyecto)
 5. [Licencia](#5-licencia)
 6. [Autoría](#6-autoría)
