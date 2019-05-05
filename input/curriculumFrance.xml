@@ -1,124 +1,134 @@
 <?xml version="1.0"?> 
 <?oxygen SCHSchema="francia.sch" type="xml"?>
-<curriculums  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:erasF="http://www.erasmusFRANCE.org" xmlns="http://www.erasmus.org"
-    xsi:schemaLocation="http://www.erasmus.org erasmus.xsd http://www.erasmusFRANCE.org francia.xsd">
-    <curriculum xsi:type="erasF:ErasFT" name-nombre-nom="Fransua" img="photos/fransua.jpg"
-        birthday-fnacimiento-datedenaissance="1995-02-25">
-        <prenom>Gusteau</prenom>
-        <passeport>AAA111111AB</passeport>
-        <CNI>562585891234</CNI>
-        <email>juan@gmail.com</email>
-        <addresse xsi:type="erasF:AddresseFT" country-paisOrigen-pays="France">
-            <CPFr>20452</CPFr>
-            <region>Saint Jean</region>
-            <province>France</province>
-            <ville>Paris</ville>
-            <rue>Remy</rue>
-            <portail>8</portail>
-            <appartement>2F</appartement>
-        </addresse>
-        <mobile>+33650678514</mobile>
-        <languematernelle>Francés</languematernelle>
-        <languesetrangeres>
-            <lng level-nivel-niveau="A2">Basque</lng>
-            <lng level-nivel-niveau="B2">Spanish</lng>
-        </languesetrangeres>
-        <carriere yearsstudying-añoscursando-anneesdetudes="6" course-curso-cours="5">Architecture</carriere>
-        <erasmusendroits xsi:type="erasF:LieusFT">
-            <lieu>Bilbao</lieu>
-            <lieu>Barcelona</lieu>
-            <lieu>Sevilla</lieu>
-        </erasmusendroits>
-        <lieuprioritaire>Bilbao</lieuprioritaire>
-        <erasF:travail>
-            <erasF:occupation poste="cocinero" typedetravail="Pratiques rémunérées" lieudetravail="PisaKil">
-                <erasF:datededébut>2016-10-20</erasF:datededébut>
-                <erasF:datedefin>2018-10-20</erasF:datedefin>
-                <erasF:description>Cocinero a tiempo parcial</erasF:description>
-                <erasF:entreprise>Pisakil S.A.</erasF:entreprise>
-                <erasF:tempsconsacré>6</erasF:tempsconsacré>
-            </erasF:occupation>
-        </erasF:travail>
-        <erasF:notes notemoyenne="6">
-            <erasF:meilleurenote cours="Antropologia">
-                <erasF:codeetudiant>12345AB00A</erasF:codeetudiant>
-                <erasF:notemoyenne>6</erasF:notemoyenne>
-            </erasF:meilleurenote>
-            <erasF:meilleurenote cours="Estadistica">
-                <erasF:codeetudiant>12345AB00B</erasF:codeetudiant>
-                <erasF:notemoyenne>6</erasF:notemoyenne>
-            </erasF:meilleurenote>
-        </erasF:notes>
-        <erasF:realisation>
-            <erasF:realisationatteint>Practicas Junior</erasF:realisationatteint>
-        </erasF:realisation>
-        <erasF:obs>
-            <erasF:attitude>Confianza en si mismo</erasF:attitude>
-            <erasF:loisirs>Toca la guitarra</erasF:loisirs>
-            <erasF:competences>Sociable</erasF:competences>
-            <erasF:competencessociales>Divertido y atento</erasF:competencessociales>
-            <erasF:plansfuturs>Quiere ser un gran cocinero</erasF:plansfuturs>
-            <erasF:pportefeuilledeprojects>Ha escrito un libro de recetas</erasF:pportefeuilledeprojects>      
-        </erasF:obs>
-    </curriculum>
-    <curriculum xsi:type="erasF:ErasFT" name-nombre-nom="Hector" img="photos/hector.jpg"
-        birthday-fnacimiento-datedenaissance="1995-02-25">
-        <prenom>Parsia</prenom>
-        <passeport>AAA111234AC</passeport>
-        <CNI>562585891234</CNI>
-        <email>juan@gmail.com</email>
-        <addresse xsi:type="erasF:AddresseFT" country-paisOrigen-pays="France">
-            <CPFr>20652</CPFr>
-            <region>Mitchelle</region>
-            <province>France</province>
-            <ville>Ceoui</ville>
-            <rue>Lingatrio</rue>
-            <portail>9</portail>
-            <appartement>5A</appartement>
-        </addresse>
-        <tlfne>+33950852557</tlfne>
-        <languematernelle>Francés</languematernelle>
-        <languesetrangeres>
-            <lng level-nivel-niveau="B1">Russian</lng>
-            <lng level-nivel-niveau="B2">Spanish</lng>
-        </languesetrangeres>
-        <carriere yearsstudying-añoscursando-anneesdetudes="5" course-curso-cours="5">Médecine</carriere>
-        <erasmusendroits xsi:type="erasF:LieusFT">
-            <lieu>Bilbao</lieu>
-            <lieu>Barcelona</lieu>
-            <lieu>Sevilla</lieu>
-        </erasmusendroits>
-        <lieuprioritaire>Sevilla</lieuprioritaire>
-        <erasF:travail>
-            <erasF:occupation poste="traductor" typedetravail="Pratiques rémunérées" lieudetravail="Segad2">
-                <erasF:datededébut>2017-11-20</erasF:datededébut>
-                <erasF:datedefin>2018-08-13</erasF:datedefin>
-                <erasF:description>Traductor de libros</erasF:description>
-                <erasF:entreprise>Astral</erasF:entreprise>
-                <erasF:produit>Traducí varios libros</erasF:produit>
-            </erasF:occupation>
-        </erasF:travail>
-        <erasF:notes notemoyenne="7">
-            <erasF:meilleurenote cours="Lingüistica">
-                <erasF:codeetudiant>12387AB01A</erasF:codeetudiant>
-                <erasF:notemoyenne>6</erasF:notemoyenne>
-            </erasF:meilleurenote>
-            <erasF:meilleurenote cours="Fonética">
-                <erasF:codeetudiant>12245CD20B</erasF:codeetudiant>
-                <erasF:notemoyenne>8</erasF:notemoyenne>
-            </erasF:meilleurenote>
-        </erasF:notes>
-        <erasF:realisation>
-            <erasF:realisationatteint>Alumno con méritos en el consejo</erasF:realisationatteint>
-        </erasF:realisation>
-        <erasF:obs>
-            <erasF:attitude>Trabaja bien bajo presión</erasF:attitude>
-            <erasF:loisirs>Toca el bajo</erasF:loisirs>
-            <erasF:competences>Amable</erasF:competences>
-            <erasF:competencessociales>Se desenvuelve bien</erasF:competencessociales>
-            <erasF:plansfuturs>Quiere comprar una casa</erasF:plansfuturs>
-            <erasF:pportefeuilledeprojects>Tradució una novela</erasF:pportefeuilledeprojects>      
-        </erasF:obs>
-    </curriculum>
+<curriculums
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:erasF="http://www.erasmusFRANCE.org"
+	xmlns="http://www.erasmus.org"
+	xsi:schemaLocation="http://www.erasmus.org erasmus.xsd http://www.erasmusFRANCE.org francia.xsd">
+	<curriculum xsi:type="erasF:ErasFT"
+		name-nombre-nom="Fransua" img="photos/fransua.jpg"
+		birthday-fnacimiento-datedenaissance="1995-02-25">
+		<prenom>Gusteau</prenom>
+		<passeport>AAA111111AB</passeport>
+		<CNI>562585891234</CNI>
+		<email>juan@gmail.com</email>
+		<addresse xsi:type="erasF:AddresseFT"
+			country-paisOrigen-pays="France">
+			<CPFr>20452</CPFr>
+			<region>Saint Jean</region>
+			<province>France</province>
+			<ville>Paris</ville>
+			<rue>Remy</rue>
+			<portail>8</portail>
+			<appartement>2F</appartement>
+		</addresse>
+		<mobile>+33650678514</mobile>
+		<languematernelle>Francés</languematernelle>
+		<languesetrangeres>
+			<lng level-nivel-niveau="A2">Basque</lng>
+			<lng level-nivel-niveau="B2">Spanish</lng>
+		</languesetrangeres>
+		<carriere yearsstudying-añoscursando-anneesdetudes="6"
+			course-curso-cours="5">Architecture</carriere>
+		<erasmusendroits xsi:type="erasF:LieusFT">
+			<lieu>Bilbao</lieu>
+			<lieu>Barcelona</lieu>
+			<lieu>Sevilla</lieu>
+		</erasmusendroits>
+		<lieuprioritaire>Bilbao</lieuprioritaire>
+		<erasF:travail>
+			<erasF:occupation poste="cocinero"
+				typedetravail="Pratiques rémunérées" lieudetravail="PisaKil">
+				<erasF:datededébut>2016-10-20</erasF:datededébut>
+				<erasF:datedefin>2018-10-20</erasF:datedefin>
+				<erasF:description>Cocinero a tiempo parcial</erasF:description>
+				<erasF:entreprise>Pisakil S.A.</erasF:entreprise>
+				<erasF:tempsconsacré>6</erasF:tempsconsacré>
+			</erasF:occupation>
+		</erasF:travail>
+		<erasF:notes notemoyenne="6">
+			<erasF:meilleurenote cours="Antropologia">
+				<erasF:codeetudiant>12345AB00A</erasF:codeetudiant>
+				<erasF:notemoyenne>6</erasF:notemoyenne>
+			</erasF:meilleurenote>
+			<erasF:meilleurenote cours="Estadistica">
+				<erasF:codeetudiant>12345AB00B</erasF:codeetudiant>
+				<erasF:notemoyenne>6</erasF:notemoyenne>
+			</erasF:meilleurenote>
+		</erasF:notes>
+		<erasF:realisation>
+			<erasF:realisationatteint>Practicas Junior</erasF:realisationatteint>
+		</erasF:realisation>
+		<erasF:obs>
+			<erasF:attitude>Confianza en si mismo</erasF:attitude>
+			<erasF:loisirs>Toca la guitarra</erasF:loisirs>
+			<erasF:competences>Sociable</erasF:competences>
+			<erasF:competencessociales>Divertido y atento</erasF:competencessociales>
+			<erasF:plansfuturs>Quiere ser un gran cocinero</erasF:plansfuturs>
+			<erasF:pportefeuilledeprojects>Ha escrito un libro de recetas</erasF:pportefeuilledeprojects>
+		</erasF:obs>
+	</curriculum>
+	<curriculum xsi:type="erasF:ErasFT" name-nombre-nom="Hector"
+		img="photos/hector.jpg"
+		birthday-fnacimiento-datedenaissance="1995-02-25">
+		<prenom>Parsia</prenom>
+		<passeport>AAA111234AC</passeport>
+		<CNI>562585891234</CNI>
+		<email>juan@gmail.com</email>
+		<addresse xsi:type="erasF:AddresseFT"
+			country-paisOrigen-pays="France">
+			<CPFr>20652</CPFr>
+			<region>Mitchelle</region>
+			<province>France</province>
+			<ville>Ceoui</ville>
+			<rue>Lingatrio</rue>
+			<portail>9</portail>
+			<appartement>5A</appartement>
+		</addresse>
+		<tlfne>+33950852557</tlfne>
+		<languematernelle>Francés</languematernelle>
+		<languesetrangeres>
+			<lng level-nivel-niveau="B1">Russian</lng>
+			<lng level-nivel-niveau="B2">Spanish</lng>
+		</languesetrangeres>
+		<carriere yearsstudying-añoscursando-anneesdetudes="5"
+			course-curso-cours="5">Médecine</carriere>
+		<erasmusendroits xsi:type="erasF:LieusFT">
+			<lieu>Bilbao</lieu>
+			<lieu>Barcelona</lieu>
+			<lieu>Sevilla</lieu>
+		</erasmusendroits>
+		<lieuprioritaire>Sevilla</lieuprioritaire>
+		<erasF:travail>
+			<erasF:occupation poste="traductor"
+				typedetravail="Pratiques rémunérées" lieudetravail="Segad2">
+				<erasF:datededébut>2017-11-20</erasF:datededébut>
+				<erasF:datedefin>2018-08-13</erasF:datedefin>
+				<erasF:description>Traductor de libros</erasF:description>
+				<erasF:entreprise>Astral</erasF:entreprise>
+				<erasF:produit>Traducí varios libros</erasF:produit>
+			</erasF:occupation>
+		</erasF:travail>
+		<erasF:notes notemoyenne="7">
+			<erasF:meilleurenote cours="Lingüistica">
+				<erasF:codeetudiant>12387AB01A</erasF:codeetudiant>
+				<erasF:notemoyenne>6</erasF:notemoyenne>
+			</erasF:meilleurenote>
+			<erasF:meilleurenote cours="Fonética">
+				<erasF:codeetudiant>12245CD20B</erasF:codeetudiant>
+				<erasF:notemoyenne>8</erasF:notemoyenne>
+			</erasF:meilleurenote>
+		</erasF:notes>
+		<erasF:realisation>
+			<erasF:realisationatteint>Alumno con méritos en el consejo</erasF:realisationatteint>
+		</erasF:realisation>
+		<erasF:obs>
+			<erasF:attitude>Trabaja bien bajo presión</erasF:attitude>
+			<erasF:loisirs>Toca el bajo</erasF:loisirs>
+			<erasF:competences>Amable</erasF:competences>
+			<erasF:competencessociales>Se desenvuelve bien</erasF:competencessociales>
+			<erasF:plansfuturs>Quiere comprar una casa</erasF:plansfuturs>
+			<erasF:pportefeuilledeprojects>Tradució una novela</erasF:pportefeuilledeprojects>
+		</erasF:obs>
+	</curriculum>
 </curriculums>

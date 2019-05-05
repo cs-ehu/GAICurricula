@@ -1,64 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns="http://www.erasmus.org" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	xmlns:eras="http://www.erasmus.org" xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+<xsd:schema xmlns="http://www.erasmus.org"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:eras="http://www.erasmus.org"
+	xmlns:sch="http://purl.oclc.org/dsdl/schematron"
 	targetNamespace="http://www.erasmus.org" elementFormDefault="qualified">
-	
+
 	<xsd:element name="curriculums">
 		<xsd:complexType>
 			<xsd:sequence>
-				<xsd:element ref="curriculum" maxOccurs="unbounded"/>
+				<xsd:element ref="curriculum" maxOccurs="unbounded" />
 			</xsd:sequence>
 		</xsd:complexType>
 		<xsd:key name="PKInt">
-			<xsd:selector xpath="eras:curriculum/eras:passint"/>
-			<xsd:field xpath="."/>
+			<xsd:selector xpath="eras:curriculum/eras:passint" />
+			<xsd:field xpath="." />
 		</xsd:key>
 		<xsd:key name="PKEs">
-			<xsd:selector xpath="eras:curriculum/eras:pasaporte"/>
-			<xsd:field xpath="."/>
+			<xsd:selector xpath="eras:curriculum/eras:pasaporte" />
+			<xsd:field xpath="." />
 		</xsd:key>
 		<xsd:key name="PKIng">
-			<xsd:selector xpath="eras:curriculum/eras:passport"/>
-			<xsd:field xpath="."/>
+			<xsd:selector xpath="eras:curriculum/eras:passport" />
+			<xsd:field xpath="." />
 		</xsd:key>
 		<xsd:key name="PKFr">
-			<xsd:selector xpath="eras:curriculum/eras:passeport"/>
-			<xsd:field xpath="."/>
+			<xsd:selector xpath="eras:curriculum/eras:passeport" />
+			<xsd:field xpath="." />
 		</xsd:key>
 	</xsd:element>
-	
+
 	<xsd:element name="curriculum" type="CurriT">
 		<xsd:key name="LEsp">
-			<xsd:selector xpath="eras:lugareserasmus/eras:lugar"/>
-			<xsd:field xpath="."/>
+			<xsd:selector xpath="eras:lugareserasmus/eras:lugar" />
+			<xsd:field xpath="." />
 		</xsd:key>
 		<xsd:keyref refer="LEsp" name="ClaveExtEs">
-			<xsd:selector xpath="eras:lugarprioritario"/>
-			<xsd:field xpath="."/>
+			<xsd:selector xpath="eras:lugarprioritario" />
+			<xsd:field xpath="." />
 		</xsd:keyref>
 		<xsd:key name="LFr">
-			<xsd:selector xpath="eras:erasmusendroits/eras:lieu"/>
-			<xsd:field xpath="."/>
+			<xsd:selector xpath="eras:erasmusendroits/eras:lieu" />
+			<xsd:field xpath="." />
 		</xsd:key>
 		<xsd:keyref refer="LFr" name="ClaveExtFr">
-			<xsd:selector xpath="eras:lieuprioritaire"/>
-			<xsd:field xpath="."/>
+			<xsd:selector xpath="eras:lieuprioritaire" />
+			<xsd:field xpath="." />
 		</xsd:keyref>
 		<xsd:key name="LIng">
-			<xsd:selector xpath="eras:erasmusplaces/eras:place"/>
-			<xsd:field xpath="."/>
+			<xsd:selector xpath="eras:erasmusplaces/eras:place" />
+			<xsd:field xpath="." />
 		</xsd:key>
 		<xsd:keyref refer="LIng" name="ClaveExtIn">
-			<xsd:selector xpath="eras:priorityplace"/>
-			<xsd:field xpath="."/>
+			<xsd:selector xpath="eras:priorityplace" />
+			<xsd:field xpath="." />
 		</xsd:keyref>
 	</xsd:element>
-	
-	<xsd:complexType name="CurriT" >
+
+	<xsd:complexType name="CurriT">
 		<xsd:sequence>
-			<xsd:element ref="apellidos"/>
-			<xsd:element ref="passint"/>
-			<xsd:element ref="ID" minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="apellidos" />
+			<xsd:element ref="passint" />
+			<xsd:element ref="ID" minOccurs="0" maxOccurs="1" />
 			<xsd:element ref="email" />
 			<xsd:element ref="direccion" />
 			<xsd:choice>
@@ -66,77 +68,98 @@
 				<xsd:element ref="movil" />
 			</xsd:choice>
 			<xsd:element ref="lenguajematerno" />
-			<xsd:element ref="lenguasextranjeras"  minOccurs="0" maxOccurs="1"/>
+			<xsd:element ref="lenguasextranjeras" minOccurs="0"
+				maxOccurs="1" />
 			<xsd:element ref="grado" />
 			<xsd:element ref="lugareserasmus" />
-			<xsd:element ref="lugarprioritario" />	
+			<xsd:element ref="lugarprioritario" />
 		</xsd:sequence>
-		<xsd:attribute name="name-nombre-nom" type="xsd:string" use="required"/>
-		<xsd:attribute name="birthday-fnacimiento-datedenaissance" type="xsd:date" use="required"/>
+		<xsd:attribute name="name-nombre-nom" type="xsd:string"
+			use="required" />
+		<xsd:attribute
+			name="birthday-fnacimiento-datedenaissance" type="xsd:date"
+			use="required" />
 		<xsd:attribute name="img" use="optional">
 			<xsd:simpleType>
 				<xsd:restriction base="xsd:string">
-					<xsd:pattern value="(.*/)([^/]*)"/>
-					<xsd:maxLength value="50"/>
+					<xsd:pattern value="(.*/)([^/]*)" />
+					<xsd:maxLength value="50" />
 				</xsd:restriction>
 			</xsd:simpleType>
 		</xsd:attribute>
 	</xsd:complexType>
-	
-	
-	<xsd:element name="apellidos" type="xsd:string"/>
-	<xsd:element name="surname" type="xsd:string" substitutionGroup="apellidos"/>
-	<xsd:element name="prenom" type="xsd:string" substitutionGroup="apellidos"/>
-	
-	<xsd:element name="email" type="EmailT"/>
-	
-	<xsd:element name="direccion" type="DireccionT"/>
-	<xsd:element name="address" type="DireccionT" substitutionGroup="direccion"/>
-	<xsd:element name="addresse" type="DireccionT" substitutionGroup="direccion"/>
-	
-	<xsd:element name="tlf" type="TlfT"/>
-	<xsd:element name="tlp" type="TlfT" substitutionGroup="tlf"/>
-	<xsd:element name="tlfne" type="TlfT" substitutionGroup="tlf"/>
-	
-	<xsd:element name="movil" type="MvT"/>
-	<xsd:element name="mobile" type="MvT" substitutionGroup="movil"/>
-	
-	<xsd:element name="lenguajematerno" type="xsd:string"/>
-	<xsd:element name="mothertongues" type="xsd:string" substitutionGroup="lenguajematerno"/>
-	<xsd:element name="languematernelle" type="xsd:string" substitutionGroup="lenguajematerno"/>
-	
-	
+
+
+	<xsd:element name="apellidos" type="xsd:string" />
+	<xsd:element name="surname" type="xsd:string"
+		substitutionGroup="apellidos" />
+	<xsd:element name="prenom" type="xsd:string"
+		substitutionGroup="apellidos" />
+
+	<xsd:element name="email" type="EmailT" />
+
+	<xsd:element name="direccion" type="DireccionT" />
+	<xsd:element name="address" type="DireccionT"
+		substitutionGroup="direccion" />
+	<xsd:element name="addresse" type="DireccionT"
+		substitutionGroup="direccion" />
+
+	<xsd:element name="tlf" type="TlfT" />
+	<xsd:element name="tlp" type="TlfT" substitutionGroup="tlf" />
+	<xsd:element name="tlfne" type="TlfT"
+		substitutionGroup="tlf" />
+
+	<xsd:element name="movil" type="MvT" />
+	<xsd:element name="mobile" type="MvT"
+		substitutionGroup="movil" />
+
+	<xsd:element name="lenguajematerno" type="xsd:string" />
+	<xsd:element name="mothertongues" type="xsd:string"
+		substitutionGroup="lenguajematerno" />
+	<xsd:element name="languematernelle" type="xsd:string"
+		substitutionGroup="lenguajematerno" />
+
+
 	<xsd:element name="lenguasextranjeras" type="LenguasT" />
-	<xsd:element name="foreignlanguages" type="LenguasT" substitutionGroup="lenguasextranjeras"/>
-	<xsd:element name="languesetrangeres" type="LenguasT" substitutionGroup="lenguasextranjeras"/>
-	
-	<xsd:element name="grado" type="GradoT"/>
-	<xsd:element name="career" type="GradoT" substitutionGroup="grado"/>
-	<xsd:element name="carriere" type="GradoT" substitutionGroup="grado"/>
-	
+	<xsd:element name="foreignlanguages" type="LenguasT"
+		substitutionGroup="lenguasextranjeras" />
+	<xsd:element name="languesetrangeres" type="LenguasT"
+		substitutionGroup="lenguasextranjeras" />
+
+	<xsd:element name="grado" type="GradoT" />
+	<xsd:element name="career" type="GradoT"
+		substitutionGroup="grado" />
+	<xsd:element name="carriere" type="GradoT"
+		substitutionGroup="grado" />
+
 	<xsd:element name="lugareserasmus" type="LugaresT" />
-	<xsd:element name="erasmusplaces" type="LugaresT" substitutionGroup="lugareserasmus"/>
-	<xsd:element name="erasmusendroits" type="LugaresT" substitutionGroup="lugareserasmus"/>
-	
-	<xsd:element name="lugarprioritario" type="LugarT"/>
-	<xsd:element name="priorityplace" type="LugarT" substitutionGroup="lugarprioritario"/>
-	<xsd:element name="lieuprioritaire" type="LugarT" substitutionGroup="lugarprioritario"/>
-	
+	<xsd:element name="erasmusplaces" type="LugaresT"
+		substitutionGroup="lugareserasmus" />
+	<xsd:element name="erasmusendroits" type="LugaresT"
+		substitutionGroup="lugareserasmus" />
+
+	<xsd:element name="lugarprioritario" type="LugarT" />
+	<xsd:element name="priorityplace" type="LugarT"
+		substitutionGroup="lugarprioritario" />
+	<xsd:element name="lieuprioritaire" type="LugarT"
+		substitutionGroup="lugarprioritario" />
+
 	<xsd:complexType name="LenguasT">
 		<xsd:sequence>
 			<xsd:element name="lng" minOccurs="0" maxOccurs="10">
 				<xsd:complexType>
 					<xsd:simpleContent>
 						<xsd:extension base="xsd:string">
-							<xsd:attribute name="level-nivel-niveau" use="required">
+							<xsd:attribute name="level-nivel-niveau"
+								use="required">
 								<xsd:simpleType>
 									<xsd:restriction base="xsd:string">
-										<xsd:enumeration value="A1"/>
-										<xsd:enumeration value="A2"/>
-										<xsd:enumeration value="B1"/>
-										<xsd:enumeration value="B2"/>
-										<xsd:enumeration value="C1"/>
-										<xsd:enumeration value="C2"/>
+										<xsd:enumeration value="A1" />
+										<xsd:enumeration value="A2" />
+										<xsd:enumeration value="B1" />
+										<xsd:enumeration value="B2" />
+										<xsd:enumeration value="C1" />
+										<xsd:enumeration value="C2" />
 									</xsd:restriction>
 								</xsd:simpleType>
 							</xsd:attribute>
@@ -146,181 +169,206 @@
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:complexType>
-	
-	
-	
-		
+
+
+
+
 	<xsd:complexType name="LugaresT">
 		<xsd:sequence>
 			<xsd:element ref="lugar" minOccurs="1" maxOccurs="6" />
 		</xsd:sequence>
 	</xsd:complexType>
-	
+
 	<xsd:element name="lugar" type="LugarT" />
-	<xsd:element name="place" type="LugarT" substitutionGroup="lugar" />
-	<xsd:element name="lieu" type="LugarT" substitutionGroup="lugar"/>
-	
+	<xsd:element name="place" type="LugarT"
+		substitutionGroup="lugar" />
+	<xsd:element name="lieu" type="LugarT"
+		substitutionGroup="lugar" />
+
 	<xsd:complexType name="GradoT">
 		<xsd:simpleContent>
 			<xsd:extension base="xsd:string">
-				<xsd:attribute name="yearsstudying-añoscursando-anneesdetudes" type="xsd:nonNegativeInteger" use="required"/>
-				<xsd:attribute name="course-curso-cours" type="xsd:nonNegativeInteger" use="required"/>
+				<xsd:attribute
+					name="yearsstudying-añoscursando-anneesdetudes"
+					type="xsd:nonNegativeInteger" use="required" />
+				<xsd:attribute name="course-curso-cours"
+					type="xsd:nonNegativeInteger" use="required" />
 			</xsd:extension>
 		</xsd:simpleContent>
 	</xsd:complexType>
-	
-	<xsd:element name="ID" type="IDT"/>
-	<xsd:element name="CNI" type="CNIT" substitutionGroup="ID"/>
-	<xsd:element name="DriveLicense" type="DLT" substitutionGroup="ID"/>
-	<xsd:element name="DNI" type="DNIT" substitutionGroup="ID"/>
+
+	<xsd:element name="ID" type="IDT" />
+	<xsd:element name="CNI" type="CNIT" substitutionGroup="ID" />
+	<xsd:element name="DriveLicense" type="DLT"
+		substitutionGroup="ID" />
+	<xsd:element name="DNI" type="DNIT" substitutionGroup="ID" />
 	<xsd:simpleType name="DLT">
 		<xsd:restriction base="IDT">
-			<xsd:pattern value="[A-Z]{5}[0-9]{8}[A-Z]{2}[0-9][A-Z]{2} [0-9]{2}"/>
+			<xsd:pattern
+				value="[A-Z]{5}[0-9]{8}[A-Z]{2}[0-9][A-Z]{2} [0-9]{2}" />
 		</xsd:restriction>
 	</xsd:simpleType>
 	<xsd:simpleType name="CNIT">
 		<xsd:restriction base="IDT">
-			<xsd:pattern value="[0-9]{12}"/>
+			<xsd:pattern value="[0-9]{12}" />
 		</xsd:restriction>
 	</xsd:simpleType>
 	<xsd:simpleType name="DNIT">
 		<xsd:restriction base="IDT">
-			<xsd:pattern value="[0-9]{8}[A-Z]{1}"/>
+			<xsd:pattern value="[0-9]{8}[A-Z]{1}" />
 		</xsd:restriction>
 	</xsd:simpleType>
 	<xsd:simpleType name="IDT">
-		<xsd:restriction base="xsd:string"/>
+		<xsd:restriction base="xsd:string" />
 	</xsd:simpleType>
-	<xsd:element name="passint" type="PasaporteT"/>
-	<xsd:element name="passport" type="PasaporteIngT" substitutionGroup="passint"/>
-	<xsd:element name="passeport" type="PasaporteFranT" substitutionGroup="passint"/>
-	<xsd:element name="pasaporte" type="PasaporteEsT" substitutionGroup="passint"/>
+	<xsd:element name="passint" type="PasaporteT" />
+	<xsd:element name="passport" type="PasaporteIngT"
+		substitutionGroup="passint" />
+	<xsd:element name="passeport" type="PasaporteFranT"
+		substitutionGroup="passint" />
+	<xsd:element name="pasaporte" type="PasaporteEsT"
+		substitutionGroup="passint" />
 	<xsd:simpleType name="PasaporteInT">
 		<xsd:restriction base="PasaporteT">
 			<xsd:pattern
-				value="[A-Z0-9]{9}[0-9]{1}[A-Z]{3}[0-9]{7}[A-Z]{1}[0-9]{7}[A-Z0-9]{14}[0-9]{2}"/>
+				value="[A-Z0-9]{9}[0-9]{1}[A-Z]{3}[0-9]{7}[A-Z]{1}[0-9]{7}[A-Z0-9]{14}[0-9]{2}" />
 		</xsd:restriction>
 	</xsd:simpleType>
 	<xsd:simpleType name="PasaporteFranT">
 		<xsd:restriction base="PasaporteT">
-			<xsd:pattern value="[A-Z]{3}[0-9]{6}[A-Z]{2}"/>
+			<xsd:pattern value="[A-Z]{3}[0-9]{6}[A-Z]{2}" />
 		</xsd:restriction>
 	</xsd:simpleType>
 	<xsd:simpleType name="PasaporteIngT">
 		<xsd:restriction base="PasaporteT">
-			<xsd:pattern value="[0-9]{10}GBR[0-9]{7}[U,M,F]{1}[0-9]{9}"/>
+			<xsd:pattern
+				value="[0-9]{10}GBR[0-9]{7}[U,M,F]{1}[0-9]{9}" />
 		</xsd:restriction>
 	</xsd:simpleType>
 	<xsd:simpleType name="PasaporteEsT">
 		<xsd:restriction base="PasaporteT">
-			<xsd:pattern value="[A-Z]{3}[0-9]{6}[A-Z]?"/>
+			<xsd:pattern value="[A-Z]{3}[0-9]{6}[A-Z]?" />
 		</xsd:restriction>
 	</xsd:simpleType>
 	<xsd:simpleType name="PasaporteT">
-		<xsd:restriction base="xsd:string"/>
+		<xsd:restriction base="xsd:string" />
 	</xsd:simpleType>
 	<xsd:simpleType name="TlfT">
 		<xsd:restriction base="xsd:string">
-			<xsd:pattern value="(\+|\d)(34|44|33|49|31)(9)[0-9]{8}"/>
+			<xsd:pattern value="(\+|\d)(34|44|33|49|31)(9)[0-9]{8}" />
 		</xsd:restriction>
 	</xsd:simpleType>
 	<xsd:simpleType name="MvT">
 		<xsd:restriction base="xsd:string">
-			<xsd:pattern value="(\+|\d)(34|44|33|49|31)(6)[0-9]{8}"/>
+			<xsd:pattern value="(\+|\d)(34|44|33|49|31)(6)[0-9]{8}" />
 		</xsd:restriction>
 	</xsd:simpleType>
 	<xsd:simpleType name="EmailT">
 		<xsd:restriction base="xsd:string">
 			<xsd:pattern
-				value="([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})"/>
-			<xsd:maxLength value="70"/>
+				value="([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})" />
+			<xsd:maxLength value="70" />
 		</xsd:restriction>
 	</xsd:simpleType>
 	<xsd:complexType name="DireccionT">
 		<xsd:sequence>
-			<xsd:element ref="CPI"/>
+			<xsd:element ref="CPI" />
 			<xsd:element ref="region" />
 			<xsd:element ref="provincia" />
 			<xsd:element ref="ciudad" />
 			<xsd:element ref="calle" />
-			<xsd:element ref="portal"/>
-			<xsd:element ref="piso"/>	
+			<xsd:element ref="portal" />
+			<xsd:element ref="piso" />
 		</xsd:sequence>
-		<xsd:attribute name="country-paisOrigen-pays" type="paisOrgT" use="required"/>
+		<xsd:attribute name="country-paisOrigen-pays"
+			type="paisOrgT" use="required" />
 	</xsd:complexType>
-	
-	<xsd:element name="provincia" type="xsd:string"/>
-	<xsd:element name="province" type="xsd:string" substitutionGroup="provincia"/>
-	
-	<xsd:element name="ciudad" type="xsd:string"/>
-	<xsd:element name="city" type="xsd:string" substitutionGroup="ciudad"/>
-	<xsd:element name="ville" type="xsd:string" substitutionGroup="ciudad"/>
-	
-	<xsd:element name="calle" type="xsd:string"/>
-	<xsd:element name="street" type="xsd:string" substitutionGroup="calle"/>
-	<xsd:element name="rue" type="xsd:string" substitutionGroup="calle"/>
-	
-	<xsd:element name="portal" type="xsd:nonNegativeInteger"/>
-	<xsd:element name="doorway" type="xsd:nonNegativeInteger" substitutionGroup="portal"/>
-	<xsd:element name="portail" type="xsd:nonNegativeInteger" substitutionGroup="portal"/>
-	
-	<xsd:element name="piso" type="pisoT"/>
-	<xsd:element name="apartment" type="pisoT" substitutionGroup="piso"/>
-	<xsd:element name="appartement" type="pisoT" substitutionGroup="piso"/>	
-	
-	<xsd:element name="region" type="xsd:string"/>
-	
-	<xsd:element name="CPI" type="CPT"/>
-	<xsd:element name="CPEs" type="CPEsT" substitutionGroup="CPI"/>
-	<xsd:element name="CPFr" type="CPEsT" substitutionGroup="CPI"/>
-	<xsd:element name="CPIng" type="CPIngT" substitutionGroup="CPI"/>
-	
+
+	<xsd:element name="provincia" type="xsd:string" />
+	<xsd:element name="province" type="xsd:string"
+		substitutionGroup="provincia" />
+
+	<xsd:element name="ciudad" type="xsd:string" />
+	<xsd:element name="city" type="xsd:string"
+		substitutionGroup="ciudad" />
+	<xsd:element name="ville" type="xsd:string"
+		substitutionGroup="ciudad" />
+
+	<xsd:element name="calle" type="xsd:string" />
+	<xsd:element name="street" type="xsd:string"
+		substitutionGroup="calle" />
+	<xsd:element name="rue" type="xsd:string"
+		substitutionGroup="calle" />
+
+	<xsd:element name="portal" type="xsd:nonNegativeInteger" />
+	<xsd:element name="doorway" type="xsd:nonNegativeInteger"
+		substitutionGroup="portal" />
+	<xsd:element name="portail" type="xsd:nonNegativeInteger"
+		substitutionGroup="portal" />
+
+	<xsd:element name="piso" type="pisoT" />
+	<xsd:element name="apartment" type="pisoT"
+		substitutionGroup="piso" />
+	<xsd:element name="appartement" type="pisoT"
+		substitutionGroup="piso" />
+
+	<xsd:element name="region" type="xsd:string" />
+
+	<xsd:element name="CPI" type="CPT" />
+	<xsd:element name="CPEs" type="CPEsT"
+		substitutionGroup="CPI" />
+	<xsd:element name="CPFr" type="CPEsT"
+		substitutionGroup="CPI" />
+	<xsd:element name="CPIng" type="CPIngT"
+		substitutionGroup="CPI" />
+
 	<xsd:simpleType name="CPT">
-		<xsd:restriction base="xsd:string"/>
+		<xsd:restriction base="xsd:string" />
 	</xsd:simpleType>
-	
+
 	<xsd:simpleType name="CPEsT">
 		<xsd:restriction base="CPT">
-			<xsd:length value="5"/>
-			<xsd:pattern value="[1234567890]*"/>
+			<xsd:length value="5" />
+			<xsd:pattern value="[1234567890]*" />
 		</xsd:restriction>
 	</xsd:simpleType>
 	<xsd:simpleType name="CPIngT">
 		<xsd:restriction base="CPT">
-			<xsd:pattern value="[A-Z]{1,2}[0-9R][0-9A-Z]? [0-9][ABD-HJLNP-UW-Z]{2}"/>
+			<xsd:pattern
+				value="[A-Z]{1,2}[0-9R][0-9A-Z]? [0-9][ABD-HJLNP-UW-Z]{2}" />
 		</xsd:restriction>
 	</xsd:simpleType>
 	<xsd:simpleType name="paisOrgT">
 		<xsd:restriction base="xsd:string">
-			<xsd:enumeration value="Germany"/>
-			<xsd:enumeration value="France"/>
-			<xsd:enumeration value="Austria"/>
-			<xsd:enumeration value="Belgium"/>
-			<xsd:enumeration value="Spain"/>
-			<xsd:enumeration value="Italy"/>
-			<xsd:enumeration value="Holland"/>
-			<xsd:enumeration value="England"/>
-			<xsd:enumeration value="Switzerland"/>
-			<xsd:enumeration value="Greece"/>
+			<xsd:enumeration value="Germany" />
+			<xsd:enumeration value="France" />
+			<xsd:enumeration value="Austria" />
+			<xsd:enumeration value="Belgium" />
+			<xsd:enumeration value="Spain" />
+			<xsd:enumeration value="Italy" />
+			<xsd:enumeration value="Holland" />
+			<xsd:enumeration value="England" />
+			<xsd:enumeration value="Switzerland" />
+			<xsd:enumeration value="Greece" />
 		</xsd:restriction>
 	</xsd:simpleType>
 	<xsd:simpleType name="LugarT">
 		<xsd:restriction base="xsd:string">
-			<xsd:enumeration value="Bilbao"/>
-			<xsd:enumeration value="Donosti"/>
-			<xsd:enumeration value="Madrid"/>
-			<xsd:enumeration value="Barcelona"/>
-			<xsd:enumeration value="Sevilla"/>
-			<xsd:enumeration value="León"/>
-			<xsd:enumeration value="Valencia"/>
+			<xsd:enumeration value="Bilbao" />
+			<xsd:enumeration value="Donosti" />
+			<xsd:enumeration value="Madrid" />
+			<xsd:enumeration value="Barcelona" />
+			<xsd:enumeration value="Sevilla" />
+			<xsd:enumeration value="León" />
+			<xsd:enumeration value="Valencia" />
 		</xsd:restriction>
 	</xsd:simpleType>
-	
-	<xsd:simpleType name="pisoT" >
+
+	<xsd:simpleType name="pisoT">
 		<xsd:restriction base="xsd:string">
-			<xsd:pattern value="[0-9][A-F]"/>
+			<xsd:pattern value="[0-9][A-F]" />
 		</xsd:restriction>
 	</xsd:simpleType>
-	
+
 
 </xsd:schema>
