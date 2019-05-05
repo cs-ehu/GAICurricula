@@ -9,10 +9,21 @@ Entre ellas, una de las claves fue XQuery, tecnología que debía ser parte de u
 
 Su extensión fue a raíz de creer que había potencial para hacer algo más complejo con estas herramientas, dando así como fruto PomHTML, una aplicación de escritorio que permite crear un HTML básico con toda la información de un pom de un proyecto Java. En pasos posteriores explicaremos como es su instalación y su uso.
 
-## 2. Instalación y uso de la aplicación
+## 2. Requisitos para la aplicación
+Para esta aplicación se necesita unicámente tener **JDK 1.8** y **MAVEN** instalados.
+
+## 3. Instalación y uso de la aplicación
 
 ### Instalación y otras utilidades a comentar
-La instalación
+La instalación del proyecto es sencilla, tan solo hace falta una vez importado el proyecto realizar la siguiente instrucción en una ventana de comandos.
+```
+mvn clean package assembly:single
+```
+Esta instrucción nos limpiará lo que pudimos hacer anteriormente en el proyecto con instrucciones MAVEN y nos realizará lo que antes hacía en la fase package, pero con la diferencia de que también nos creará el jar ejecutable para utilizar la aplicación.
+El ejecutable y lo generado estará en la carpeta *target*, en el caso de que se quiera desinstalar la aplicación será tan fácil como escribir lo siguiente.
+```
+mvn clean
+```
 
 ### Uso de la aplicación
 Después de comentar lo referente a la instalación de la aplicación, toca su ejecución. El uso de la aplicación es muy sencillo y lo explicaremos a continuación en unos cuantos pasos.
@@ -47,7 +58,7 @@ Para este caso nos interesa, así que le daremos que sí y a través de la aplic
 
 Y con todo esto dicho, así es el uso de está aplicación.
 
-## 3. Estructura del proyecto
+## 4. Estructura del proyecto
 
 El árbol de estructura general de este proyecto es la siguiente:
 
@@ -129,3 +140,12 @@ C:\Users\Michel\workspace\GAICurricula
 
 31 directories, 41 files
 ```
+
+## 5. Licencia
+La licencia utilizada para este proyecto es la **GNU General Public License v3.0**.
+Esta licencia permite en la aplicación su uso comercial, su modificación, su distribución, su uso privado y el poder ser patentada.
+Para más información sobre la licencia de este proyecto, haga click en [LICENSE](LICENSE).
+
+## 6. Autoría
+Toda la autoría de este proyecto corre a manos de [FosterGun](https://github.com/FerMod).
+Si se desea contactar con él puede hacerlo a través de GitHub o a través de su [correo eléctronico](mailto:mblanco040@ikasle.ehu.es)
