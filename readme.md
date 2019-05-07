@@ -38,7 +38,7 @@ Después de comentar lo referente a la instalación de la aplicación, toca su e
 
 ![demo0](https://raw.githubusercontent.com/cs-ehu/GAICurricula/master/imgs/demo0.PNG)
 
-Este primer punto que nos muestra es importante, ya que debido a un problema por resolver de esta fase temprana del proyecto se pide al usuario que de su fichero pom.xml le borre de la etiqueta pom todos sus atributos. Una vez se haga esto y aceptemos la notificación, pasamos al segundo paso.
+Este primer punto que nos muestra es importante, ya que debido a un problema por resolver de esta fase temprana del proyecto se pide al usuario que de su fichero pom.xml le borre de la etiqueta project todos sus atributos. Una vez se haga esto y aceptemos la notificación, pasamos al segundo paso.
 
 ![demo1](https://raw.githubusercontent.com/cs-ehu/GAICurricula/master/imgs/demo1.PNG)
 

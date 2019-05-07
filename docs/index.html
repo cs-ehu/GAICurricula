@@ -71,7 +71,7 @@ $(function() {
 <div class="textblock"><ol type="1">
 <li><a href="#1-introducción">Introducción</a></li>
 <li><a href="#2-requisitos-para-la-aplicación">Requisitos para la aplicación</a></li>
-<li><a href="#3-instalación-y-uso-de-la-aplicación">Instalación y uso de la aplicación</a> 3.1. <a href="#instalación-y-otras-utilidades-a-comentar">Instalación y otras utilidades a comentar</a> 3.2. <a href="#uso-de-la-aplicación">Uso de la aplicación</a></li>
+<li><a href="#3-instalación-y-uso-de-la-aplicación">Instalación y uso de la aplicación</a></li>
 <li><a href="#4-estructura-del-proyecto">Estructura del proyecto</a></li>
 <li><a href="#5-licencia">Licencia</a></li>
 <li><a href="#6-autoría">Autoría</a></li>
@@ -80,12 +80,13 @@ $(function() {
 <p>Entre ellas, una de las claves fue XQuery, tecnología que debía ser parte de un entregable del mismo proyecto. Este era un entregable básico que unicamente consistía en a través de un solo fichero java, generar ficheros HTML con información de XML sobre curriculums. A partir de aquí y ya con lo básico, se tuvo la idea de extenderlo y adaptar todo esto a MAVEN.</p>
 <p>Su extensión fue a raíz de creer que había potencial para hacer algo más complejo con estas herramientas, dando así como fruto PomHTML, una aplicación de escritorio que permite crear un HTML básico con toda la información de un pom de un proyecto Java. En pasos posteriores explicaremos como es su instalación y su uso.</p>
 <p>Para esta aplicación se necesita unicámente tener <b>JDK 1.8</b> y <b>MAVEN</b> instalados.</p>
-<p>La instalación del proyecto es sencilla, tan solo hace falta una vez importado el proyecto realizar la siguiente instrucción en una ventana de comandos. </p><div class="fragment"><div class="line">mvn clean package assembly:single</div></div><!-- fragment --><p> Esta instrucción nos limpiará lo que pudimos hacer anteriormente en el proyecto con instrucciones MAVEN y nos realizará lo que antes hacía en la fase package, pero con la diferencia de que también nos creará el jar ejecutable para utilizar la aplicación. El ejecutable y lo generado estará en la carpeta <em>target</em>, en el caso de que se quiera desinstalar la aplicación será tan fácil como escribir lo siguiente. </p><div class="fragment"><div class="line">mvn clean</div></div><!-- fragment --><p>Después de comentar lo referente a la instalación de la aplicación, toca su ejecución. El uso de la aplicación es muy sencillo y lo explicaremos a continuación en unos cuantos pasos.</p>
+<p>La instalación del proyecto es sencilla, tan solo hace falta una vez importado el proyecto realizar la siguiente instrucción en una ventana de comandos. </p><div class="fragment"><div class="line">mvn clean package assembly:single</div></div><!-- fragment --><p> Esta instrucción nos limpiará lo que pudimos hacer anteriormente en el proyecto con instrucciones MAVEN y nos realizará lo que antes hacía en la fase package, pero con la diferencia de que también nos creará el jar ejecutable para utilizar la aplicación. El ejecutable y lo generado estará en la carpeta <em>target</em>, en el caso de que se quiera desinstalar la aplicación será tan fácil como escribir lo siguiente. </p><div class="fragment"><div class="line">mvn clean</div></div><!-- fragment --><p> En caso de no querer instalarla, puede encontrar una versión portable <a href="https://github.com/cs-ehu/GAICurricula/releases/tag/1.0.1">aquí</a>. </p>
+<p>Después de comentar lo referente a la instalación de la aplicación, toca su ejecución. El uso de la aplicación es muy sencillo y lo explicaremos a continuación en unos cuantos pasos.</p>
 <ol type="1">
 <li>Después de instalar la aplicación, el siguiente paso es ejecutarla, para ello clicamos dos veces en el jar generado y se nos mostrará la pantalla siguiente, dándonos la bienvenida a la aplicación.</li>
 </ol>
 <img src="https://raw.githubusercontent.com/cs-ehu/GAICurricula/master/imgs/demo0.PNG" alt="demo0" class="inline"/>
-<p>Este primer punto que nos muestra es importante, ya que debido a un problema por resolver de esta fase temprana del proyecto se pide al usuario que de su fichero pom.xml le borre de la etiqueta pom todos sus atributos. Una vez se haga esto y aceptemos la notificación, pasamos al segundo paso.</p>
+<p>Este primer punto que nos muestra es importante, ya que debido a un problema por resolver de esta fase temprana del proyecto se pide al usuario que de su fichero pom.xml le borre de la etiqueta project todos sus atributos. Una vez se haga esto y aceptemos la notificación, pasamos al segundo paso.</p>
 <img src="https://raw.githubusercontent.com/cs-ehu/GAICurricula/master/imgs/demo1.PNG" alt="demo1" class="inline"/>
 <ol type="1">
 <li>Teniendo ya la aplicación lista para usarse, el siguiente paso será examinar y referenciar donde se encuentra nuestro pom, examinar y referenciar donde guardar el fichero HTML y por último dar nombre al fichero HTML que se va a generar.</li>
