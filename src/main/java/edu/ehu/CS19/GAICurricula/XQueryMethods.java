@@ -64,6 +64,7 @@ public class XQueryMethods {
 	 */
 	public void generaXQPOM(String inFile, String fn2g) throws XQException, IOException {
 		inFile = inFile.replace("\\", "/");
+		System.out.println(inFile);
 		System.out.println("**Se va a generar el fichero: " + fn2g + "**");
 		XQDataSource xqs = new SaxonXQDataSource();
 		String xQuery = "<html>\r\n" + 
@@ -75,7 +76,7 @@ public class XQueryMethods {
 				"    <body>\r\n" + 
 				"        <h3>Artefacto</h3>\r\n" + 
 				"        {\r\n" + 
-				"                for $p in doc(\"file:///" + inFile + "\")/project\r\n" + 
+				"                let $p := doc(\"file:///" + inFile + "\")/project" + 
 				"                return\r\n" + 
 				"                    <div id=\"all-page\">\r\n" + 
 				"                        <div id=\"artifact\">\r\n" + 
