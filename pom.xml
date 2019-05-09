@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
    <modelVersion>4.0.0</modelVersion>
-   
+
    <groupId>edu.ehu.CS19</groupId>
    <artifactId>GAICurricula</artifactId>
    <version>1.0.1</version>
    <packaging>jar</packaging>
-   
+
    <name>GAICurricula</name>
    <description>Proyecto Java de la asignatura Gestión Avanzada de la Información para realizar una página web básica
 		de curriculums para erasmus a través de los datos de un xml utilizando tecnologías de XQuery.
 		Extendido para representar nuevas funcionalidades con MAVEN y adaptado a este.</description>
    <url>http://maven.apache.org</url>
-   
+
    <developers>
+
       <developer>
          <id>FosterGun</id>
          <name>Miguel Ángel Blanco</name>
@@ -24,8 +26,20 @@
          </roles>
          <timezone>Europa/Madrid</timezone>
       </developer>
+
+      <developer>
+         <id>FerMod</id>
+         <name>Ferran Tudela</name>
+         <email>tudelaigarcia@gmail.com</email>
+         <url>https://github.com/FerMod</url>
+         <roles>
+            <role>Colaborador</role>
+         </roles>
+         <timezone>Europa/Madrid</timezone>
+      </developer>
+
    </developers>
-   
+
    <licenses>
       <license>
          <name>GNU General Public License v3.0</name>
@@ -34,110 +48,164 @@
          <comments>Free software license</comments>
       </license>
    </licenses>
-   
+
    <scm>
       <connection>scm:git:git://github.com/cs-ehu/GAICurricula/.git</connection>
       <developerConnection>scm:git:git://github.com/cs-ehu/GAICurricula/.git</developerConnection>
       <tag>master</tag>
       <url>https://github.com/cs-ehu/GAICurricula/</url>
    </scm>
-   
+
    <properties>
+
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
       <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
       <maven.compiler.source>1.8</maven.compiler.source>
       <maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
-	  
+
+      <!-- Dependencies -->
+      <junit.version>4.11</junit.version>
+      <net.sf.saxon.version>9.4.0.7</net.sf.saxon.version>
+
+      <!-- Plugins -->
+      <maven.compiler.plugin.version>3.8.0</maven.compiler.plugin.version>
+      <maven.assembly.plugin.version>3.1.0</maven.assembly.plugin.version>
       <maven.surefire.plugin.version>3.0.0-M3</maven.surefire.plugin.version>
       <maven.site.plugin.version>3.7.1</maven.site.plugin.version>
+      <maven.javadoc.plugin.version>3.1.0</maven.javadoc.plugin.version>
       <maven.project.info.reports.plugin.version>3.0.0</maven.project.info.reports.plugin.version>
       <maven.jxr.plugin.version>3.0.0</maven.jxr.plugin.version>
-      <maven.javadoc.plugin.version>3.1.0</maven.javadoc.plugin.version>
+
    </properties>
-   
+
    <dependencies>
+
+      <!-- Junit -->
       <dependency>
          <groupId>junit</groupId>
          <artifactId>junit</artifactId>
-         <version>4.11</version>
+         <version>${junit.version}</version>
          <scope>test</scope>
       </dependency>
-	  
+
+      <!-- Saxon-HE -->
       <dependency>
          <groupId>net.sf.saxon</groupId>
          <artifactId>Saxon-HE</artifactId>
-         <version>9.4</version>
+         <version>${net.sf.saxon.version}</version>
       </dependency>
+
    </dependencies>
+
    <build>
-      <pluginManagement>
-         <plugins>
-            <plugin>
-               <groupId>org.apache.maven.plugins</groupId>
-               <artifactId>maven-assembly-plugin</artifactId>
-               <version>3.1.0</version>
-               <configuration>
-                  <appendAssemblyId>false</appendAssemblyId>
-                  <descriptorRefs>
-                     <descriptorRef>jar-with-dependencies</descriptorRef>
-                  </descriptorRefs>
-                  <archive>
-                     <manifest>
-                        <mainClass>edu.ehu.CS19.GAICurricula.Pomexec</mainClass>
-                     </manifest>
-                  </archive>
-               </configuration>
-               <executions>
-                  <execution>
-                     <id>make-assembly</id>
-                     <phase>package</phase>
-                     <goals>
-                        <goal>single</goal>
-                     </goals>
-                  </execution>
-               </executions>
-            </plugin>
-			
-            <plugin>
-               <artifactId>maven-surefire-plugin</artifactId>
-               <version>${maven.surefire.plugin.version}</version>
-            </plugin>
-			
-            <plugin>
-               <artifactId>maven-failsafe-plugin</artifactId>
-               <version>${maven.surefire.plugin.version}</version>
-            </plugin>
-			
-            <plugin>
-               <groupId>org.apache.maven.plugins</groupId>
-               <artifactId>maven-site-plugin</artifactId>
-               <version>${maven.site.plugin.version}</version>
-               <configuration>
-                  <outputDirectory>${basedir}/docs/site</outputDirectory>
-               </configuration>
-            </plugin>
-			
-            <plugin>
-               <groupId>org.apache.maven.plugins</groupId>
-               <artifactId>maven-javadoc-plugin</artifactId>
-               <version>${maven.javadoc.plugin.version}</version>
-               <configuration>
-                  <outputDirectory>${basedir}/docs/site</outputDirectory>
-                  <nohelp>true</nohelp>
-                  <show>private</show>
-               </configuration>
-            </plugin>
-			
-            <plugin>
-               <groupId>org.apache.maven.plugins</groupId>
-               <artifactId>maven-compiler-plugin</artifactId>
-               <configuration>
-                  <source>1.8</source>
-                  <target>1.8</target>
-               </configuration>
-            </plugin>
-			
-         </plugins>
-      </pluginManagement>
+      <plugins>
+
+         <!-- Compiles the sources the project -->
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>${maven.compiler.plugin.version}</version>
+         </plugin>
+
+         <!-- Aggregates the project output along with its dependencies, modules, site documentation, and other files into a single distributable archive -->
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-assembly-plugin</artifactId>
+            <version>${maven.assembly.plugin.version}</version>
+            <configuration>
+               <appendAssemblyId>false</appendAssemblyId>
+               <descriptorRefs>
+                  <descriptorRef>jar-with-dependencies</descriptorRef>
+               </descriptorRefs>
+               <archive>
+                  <manifest>
+                     <mainClass>edu.ehu.CS19.GAICurricula.Pomexec</mainClass>
+                  </manifest>
+               </archive>
+            </configuration>
+            <executions>
+               <execution>
+                  <id>make-assembly</id>
+                  <phase>package</phase>
+                  <goals>
+                     <goal>single</goal>
+                  </goals>
+               </execution>
+            </executions>
+         </plugin>
+
+         <!-- Allows to run unit tests -->
+         <plugin>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>${maven.surefire.plugin.version}</version>
+         </plugin>
+
+         <!-- Allows to run integration tests -->
+         <plugin>
+            <artifactId>maven-failsafe-plugin</artifactId>
+            <version>${maven.surefire.plugin.version}</version>
+         </plugin>
+
+         <!-- Generates a site for the project -->
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-site-plugin</artifactId>
+            <version>${maven.site.plugin.version}</version>
+            <configuration>
+               <outputDirectory>${basedir}/docs/site</outputDirectory>
+            </configuration>
+         </plugin>
+
+         <!-- Generates Javadocs as standalone -->
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <version>${maven.javadoc.plugin.version}</version>
+            <configuration>
+               <outputDirectory>${basedir}/docs/site</outputDirectory>
+               <nohelp>true</nohelp>
+               <show>private</show>
+            </configuration>
+         </plugin>
+
+      </plugins>
    </build>
+
+   <reporting>
+      <plugins>
+
+         <!-- Generates Javadocs as part of the site generation -->
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <version>${maven.javadoc.plugin.version}</version>
+            <configuration>
+               <show>public</show>
+            </configuration>
+         </plugin>
+
+         <!-- Generates reports information about the project -->
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-project-info-reports-plugin</artifactId>
+            <version>${maven.project.info.reports.plugin.version}</version>
+         </plugin>
+
+         <!-- Generate JUnit reports as part of the site generation -->
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-report-plugin</artifactId>
+            <version>${maven.surefire.plugin.version}</version>
+         </plugin>
+
+         <!-- Allows cross reference source code  -->
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jxr-plugin</artifactId>
+            <version>${maven.jxr.plugin.version}</version>
+         </plugin>
+
+      </plugins>
+   </reporting>
+
 </project>
