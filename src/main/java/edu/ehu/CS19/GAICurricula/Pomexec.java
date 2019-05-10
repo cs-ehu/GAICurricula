@@ -64,7 +64,7 @@ public class Pomexec {
 			@Override
 			public void windowClosing(WindowEvent arg0) {
 				int confirmed = JOptionPane.showConfirmDialog(null, 
-						"¿Estás seguro de que quieres salir?", "Salir del programa",
+						"Â¿EstÃ¡s seguro de que quieres salir?", "Salir del programa",
 						JOptionPane.YES_NO_OPTION);
 
 				if (confirmed == JOptionPane.YES_OPTION) {
@@ -73,7 +73,7 @@ public class Pomexec {
 			}
 			@Override
 			public void windowOpened(WindowEvent arg0) {
-				JOptionPane.showMessageDialog(null, "¡Bienvenido! antes de continuar, recuerde borrar todos los atributos de la etiqueta project. \n -Software creado por: @FosterGun");
+				JOptionPane.showMessageDialog(null, "Â¡Bienvenido! antes de continuar, recuerde borrar todos los atributos de la etiqueta project. \n -Software creado por: @FosterGun");
 			}
 		});
 
@@ -120,14 +120,14 @@ public class Pomexec {
 			public void actionPerformed(ActionEvent e) {
 				if(pomField.getText().isEmpty() || htmlField.getText().isEmpty() || fileHTMLField.getText().isEmpty()) {
 					JOptionPane.showMessageDialog(null,
-						    "El usuario debe rellenar todos los campos para poder \nproducir el HTML con la información del POM.",
+						    "El usuario debe rellenar todos los campos para poder \nproducir el HTML con la informaciÃ³n del POM.",
 						    "Rellene todos los campos",
 						    JOptionPane.WARNING_MESSAGE);
 				} else {
 					try {
 						xqm.generaXQPOM(pomField.getText().toString(), htmlField.getText().toString() + "\\" + fileHTMLField.getText().toString());
 						int confirmed = JOptionPane.showConfirmDialog(null, 
-								"¡El fichero HTML ha sido generado con éxito! \n¿Desea verlo? si presiona sí se le abrirá.", "¡Archivo HTML generado!",
+								"Â¡El fichero HTML ha sido generado con Ã©xito! \nÂ¿Desea verlo? si presiona sÃ­ se le abrirÃ¡.", "Â¡Archivo HTML generado!",
 								JOptionPane.YES_NO_OPTION);
 
 						if (confirmed == JOptionPane.YES_OPTION) {
@@ -151,7 +151,7 @@ public class Pomexec {
 		btnCancelar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				int confirmed = JOptionPane.showConfirmDialog(null, 
-						"¿Estás seguro de que quieres salir?", "Salir del programa",
+						"Â¿EstÃ¡s seguro de que quieres salir?", "Salir del programa",
 						JOptionPane.YES_NO_OPTION);
 
 				if (confirmed == JOptionPane.YES_OPTION) {
