@@ -123,26 +123,33 @@ public class Pomexec {
 			public void actionPerformed(ActionEvent e) {
 				if(pomField.getText().isEmpty() || htmlField.getText().isEmpty() || fileHTMLField.getText().isEmpty()) {
 					JOptionPane.showMessageDialog(null,
-						    "El usuario debe rellenar todos los campos para poder \nproducir el HTML con la información del POM.",
-						    "Rellene todos los campos",
-						    JOptionPane.WARNING_MESSAGE);
+							"El usuario debe rellenar todos los campos para poder \nproducir el HTML con la información del POM.",
+							"Rellene todos los campos",
+							JOptionPane.WARNING_MESSAGE);
 				} else {
-					try {
-						xqm.generaXQPOM(pomField.getText().toString(), htmlField.getText().toString() + "\\" + fileHTMLField.getText().toString());
-						int confirmed = JOptionPane.showConfirmDialog(null, 
-								"¡El fichero HTML ha sido generado con éxito! \n¿Desea verlo? si presiona sí se le abrirá.", "¡Archivo HTML generado!",
-								JOptionPane.YES_NO_OPTION);
-
-						if (confirmed == JOptionPane.YES_OPTION) {
-							Desktop desktop = Desktop.getDesktop();
-					        File file = new File(htmlField.getText().toString() + "//" + fileHTMLField.getText().toString());
-					        if(file.exists()) desktop.open(file);
-						}
-					} catch(XQException | IOException ex2) {
+					if(!fileHTMLField.getText().endsWith(".html")) {
 						JOptionPane.showMessageDialog(null,
-							    "No se ha generado el fichero HTML. \nEl usuario debe rellenar todos los campos adecuadamente.",
-							    "Error",
-							    JOptionPane.ERROR_MESSAGE);
+								"El nombre de fichero HTML que se va a producir debe tener \nuna extensión adecuada.",
+								"Rellene el campo del fichero a generar adecuadamente",
+								JOptionPane.WARNING_MESSAGE);
+					} else {
+						try {
+							xqm.generaXQPOM(pomField.getText().toString(), htmlField.getText().toString() + "\\" + fileHTMLField.getText().toString());
+							int confirmed = JOptionPane.showConfirmDialog(null, 
+									"¡El fichero HTML ha sido generado con éxito! \n¿Desea verlo? si presiona sí se le abrirá.", "¡Archivo HTML generado!",
+									JOptionPane.YES_NO_OPTION);
+
+							if (confirmed == JOptionPane.YES_OPTION) {
+								Desktop desktop = Desktop.getDesktop();
+								File file = new File(htmlField.getText().toString() + "//" + fileHTMLField.getText().toString());
+								if(file.exists()) desktop.open(file);
+							}
+						} catch(XQException | IOException ex2) {
+							JOptionPane.showMessageDialog(null,
+									"No se ha generado el fichero HTML. \nEl usuario debe rellenar todos los campos adecuadamente.",
+									"Error",
+									JOptionPane.ERROR_MESSAGE);
+						}
 					}
 				}
 			}
@@ -188,11 +195,11 @@ public class Pomexec {
 		fileHTMLField.setColumns(10);
 		fileHTMLField.setBounds(43, 170, 166, 20);
 		frmHtmlpom.getContentPane().add(fileHTMLField);
-		
+
 		JButton btnNewButton = new JButton("New button");
 		btnNewButton.setBounds(345, 220, 46, -30);
 		frmHtmlpom.getContentPane().add(btnNewButton);
-		
+
 		JButton btnAyuda = new JButton("?");
 		btnAyuda.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
