@@ -22,6 +22,9 @@ import java.awt.event.ActionEvent;
 import java.awt.Toolkit;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.awt.Font;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class Pomexec {
 
@@ -185,5 +188,19 @@ public class Pomexec {
 		fileHTMLField.setColumns(10);
 		fileHTMLField.setBounds(43, 170, 166, 20);
 		frmHtmlpom.getContentPane().add(fileHTMLField);
+		
+		JButton btnNewButton = new JButton("New button");
+		btnNewButton.setBounds(345, 220, 46, -30);
+		frmHtmlpom.getContentPane().add(btnNewButton);
+		
+		JButton btnAyuda = new JButton("?");
+		btnAyuda.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				JOptionPane.showMessageDialog(null, "Para utilizar el programa borre antes todos los atributos de la etiqueta project del pom.");
+			}
+		});
+		btnAyuda.setFont(new Font("Tahoma", Font.PLAIN, 10));
+		btnAyuda.setBounds(388, 228, 46, 32);
+		frmHtmlpom.getContentPane().add(btnAyuda);
 	}
 }
