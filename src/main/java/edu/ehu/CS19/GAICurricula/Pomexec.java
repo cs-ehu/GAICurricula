@@ -73,7 +73,7 @@ public class Pomexec {
 			}
 			@Override
 			public void windowOpened(WindowEvent arg0) {
-				JOptionPane.showMessageDialog(null, "¡Bienvenido! antes de continuar, recuerde borrar todos los atributos de la etiqueta pom. \n -Software creado por: @FosterGun");
+				JOptionPane.showMessageDialog(null, "¡Bienvenido! antes de continuar, recuerde borrar todos los atributos de la etiqueta project. \n -Software creado por: @FosterGun");
 			}
 		});
 
