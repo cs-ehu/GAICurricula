@@ -5,7 +5,7 @@ echo "Generando docs ..."
 
 # Generate Maven site
 echo "Generando sitio web de Maven ..."
-pushd $(git rev-parse --show-toplevel)
+pushd "$(git rev-parse --show-toplevel)"
 mvn clean site
 
 # Generate Doxygen docs
