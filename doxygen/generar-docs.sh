@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e # Exit with nonzero exit code if anything fails and show script content
+set -e # Exit with nonzero exit code if anything fails
 
 echo "Generando docs ..."
 
