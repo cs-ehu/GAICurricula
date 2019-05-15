@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['xquerymethods_2ejava',['XQueryMethods.java',['../_x_query_methods_8java.html',1,'']]],
-  ['xquerymethodstest_2ejava',['XQueryMethodsTest.java',['../_x_query_methods_test_8java.html',1,'']]]
+  ['xquerymethods_2ejava',['XQueryMethods.java',['../a00008.html',1,'']]],
+  ['xquerymethodstest_2ejava',['XQueryMethodsTest.java',['../a00011.html',1,'']]]
 ];
