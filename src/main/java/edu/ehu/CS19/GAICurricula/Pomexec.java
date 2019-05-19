@@ -100,6 +100,7 @@ public class Pomexec {
 		frmHtmlpom.getContentPane().add(lblRutaDeDestino_1);
 
 		htmlField = new JTextField();
+		htmlField.setText(System.getProperty("user.home") + "\\Desktop");
 		htmlField.setColumns(10);
 		htmlField.setBounds(43, 113, 254, 20);
 		frmHtmlpom.getContentPane().add(htmlField);
@@ -192,6 +193,7 @@ public class Pomexec {
 		frmHtmlpom.getContentPane().add(lblNombreDelFichero);
 
 		fileHTMLField = new JTextField();
+		fileHTMLField.setText("pomHTML.html");
 		fileHTMLField.setColumns(10);
 		fileHTMLField.setBounds(43, 170, 166, 20);
 		frmHtmlpom.getContentPane().add(fileHTMLField);
