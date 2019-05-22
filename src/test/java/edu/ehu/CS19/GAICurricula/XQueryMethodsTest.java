@@ -36,6 +36,8 @@ class XQueryMethodsTest {
 
 	/**
 	 *  Comprueba que los lugares del primer estudiante francés son los correctos.
+	 *  
+	 *  @param prenom el nombre en francés.
 	 */
 	@DisplayName("Consulta Lista XQuery FR")
 	@ParameterizedTest

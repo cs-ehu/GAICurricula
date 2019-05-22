@@ -35,6 +35,8 @@ public class Pomexec {
 
 	/**
 	 * Launch the application.
+	 * 
+	 * @param args the main arguments.
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
