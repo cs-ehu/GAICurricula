@@ -29,6 +29,7 @@ import java.awt.event.MouseEvent;
 public class Pomexec {
 
 	private JFrame frmHtmlpom;
+	private JLabel lblPreview;
 	private JTextField pomField;
 	private JTextField htmlField;
 	private JTextField fileHTMLField;
@@ -74,7 +75,7 @@ public class Pomexec {
 		fileHTMLTextField();
 		
 		//Inicialización de los botones de la aplicación
-		btnExaminarPomInit();
+		btnExaminarPomInit(xqm);
 		btnProcesarPomInit(xqm);
 		btnCancelarInit();
 		btnExaminarHTMLInit();
@@ -106,7 +107,7 @@ public class Pomexec {
 	
 		frmHtmlpom.setTitle("HTMLPom");
 		frmHtmlpom.setResizable(false);
-		frmHtmlpom.setBounds(100, 100, 450, 300);
+		frmHtmlpom.setBounds(100, 100, 800, 900);
 		frmHtmlpom.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		frmHtmlpom.getContentPane().setLayout(null);
 	}
@@ -159,11 +160,21 @@ public class Pomexec {
 		fileHTMLField.setBounds(43, 170, 166, 20);
 		frmHtmlpom.getContentPane().add(fileHTMLField);
 	}
+	
+	/**
+	 * Inicializa un campo que contendr� la previsualizaci�n del fichero pom en formato HTML.
+	 */
+	public void htmlPreviewInit() {
+		lblPreview = new JLabel("Ruta de destino del POM");
+		lblPreview.setBounds(72, 240, 300, 300);
+		lblPreview.setText("HOLA");
+		frmHtmlpom.getContentPane().add(lblPreview);
+	}
 
 	/**
 	 * Inicializa el botón examinar correspondiente a la elección de la ruta del pom y modifica su campo de texto correspondiente cuando se elige la ruta.
 	 */
-	public void btnExaminarPomInit() {
+	public void btnExaminarPomInit(XQueryMethods xqm) {
 		JButton btnExaminarPom = new JButton("Examinar...");
 		btnExaminarPom.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -172,6 +183,15 @@ public class Pomexec {
 				if (retval == JFileChooser.APPROVE_OPTION) {
 					File filePOM = FilechoosePOM.getSelectedFile();
 					pomField.setText(filePOM.getPath());
+				}
+				try {
+					String preview = xqm.generaXQPOM(pomField.getText().toString(), htmlField.getText().toString() + "\\" + fileHTMLField.getText().toString());
+					lblPreview.setText(preview);
+				} catch (XQException | IOException e1) {
+					JOptionPane.showMessageDialog(null,
+							"Error en la previsualizacion",
+							"Error",
+							JOptionPane.ERROR_MESSAGE);
 				}
 			}
 		});
@@ -201,7 +221,7 @@ public class Pomexec {
 								JOptionPane.WARNING_MESSAGE);
 					} else {
 						try {
-							xqm.generaXQPOM(pomField.getText().toString(), htmlField.getText().toString() + "\\" + fileHTMLField.getText().toString());
+							
 							int confirmed = JOptionPane.showConfirmDialog(null, 
 									"¡El fichero HTML ha sido generado con éxito! \n¿Desea verlo? si presiona sí se le abrirá.", "¡Archivo HTML generado!",
 									JOptionPane.YES_NO_OPTION);
@@ -211,7 +231,7 @@ public class Pomexec {
 								File file = new File(htmlField.getText().toString() + "//" + fileHTMLField.getText().toString());
 								if(file.exists()) desktop.open(file);
 							}
-						} catch(XQException | IOException ex2) {
+						} catch(IOException ex2) {
 							JOptionPane.showMessageDialog(null,
 									"No se ha generado el fichero HTML. \nEl usuario debe rellenar todos los campos adecuadamente.",
 									"Error",

@@ -62,7 +62,7 @@ public class XQueryMethods {
 	 * @throws XQException Exception se lanza cuando se presenta un error con la instrucción XQuery.
 	 * @throws IOException Exception se lanza cuando se presenta un error escribiendo un fichero.
 	 */
-	public void generaXQPOM(String inFile, String fn2g) throws XQException, IOException {
+	public String generaXQPOM(String inFile, String fn2g) throws XQException, IOException {
 		inFile = inFile.replace("\\", "/");
 		System.out.println(inFile);
 		System.out.println("**Se va a generar el fichero: " + fn2g + "**");
@@ -143,18 +143,17 @@ public class XQueryMethods {
 		XQExpression xqe = conn.createExpression();
 		XQResultSequence rs = xqe.executeQuery(xQuery);
 
-		BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(fn2g));
-
+		String aline = "";
 		while (rs.next()) {
-			String aline = rs.getItemAsString(null);
-			bufferedWriter.write(aline);
-			bufferedWriter.newLine();
+			aline += rs.getItemAsString(null);
+			aline += "\n";
 		}
-
-		bufferedWriter.close();
+;
 		conn.close();
 
 		System.out.println("**Fichero generado con Éxito**");
+		
+		return aline;
 
 	}
 
