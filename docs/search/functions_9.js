@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['setup',['setUp',['../a00037.html#a7fea8bc0d25f1588cba324be6bcd088e',1,'edu::ehu::CS19::GAICurricula::XQueryMethodsTest']]]
+  ['xquerymethods',['XQueryMethods',['../a00032.html#ade5a845ccb94c1feb5420a2550243985',1,'edu::ehu::CS19::GAICurricula::XQueryMethods']]]
 ];
