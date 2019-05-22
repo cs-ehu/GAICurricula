@@ -102,7 +102,7 @@ public class Pomexec {
 			}
 			@Override
 			public void windowOpened(WindowEvent arg0) {
-				JOptionPane.showMessageDialog(null, "¡Bienvenido! antes de continuar, recuerde borrar todos los atributos de la etiqueta project. \n -Software creado por: @FosterGun");
+				JOptionPane.showMessageDialog(null, "¡Bienvenido a nuestra aplicación! \n -Software creado por: @FosterGun");
 			}
 		});
 	
@@ -274,7 +274,10 @@ public class Pomexec {
 		JButton btnAyuda = new JButton("?");
 		btnAyuda.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				JOptionPane.showMessageDialog(null, "Para utilizar el programa borre antes todos los atributos de la etiqueta project del pom.");
+				JOptionPane.showMessageDialog(null, "1. Seleccione en el primer campo de texto la ruta del pom de su proyecto. \n"
+						+ "2. Seleccione la ruta de destino del fichero html que se va a generar (por defecto se guardará en el escritorio).\n"
+						+ "3. Nombre el fichero html que se va a generar (por defecto será pomHTML).\n"
+						+ "4. Presione procesar pom y se generará el archivo.");
 			}
 		});
 		btnAyuda.setFont(new Font("Tahoma", Font.PLAIN, 10));
