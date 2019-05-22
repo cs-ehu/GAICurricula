@@ -50,10 +50,10 @@
    </licenses>
 
    <scm>
-      <connection>scm:git:git://github.com/cs-ehu/GAICurricula/.git</connection>
-      <developerConnection>scm:git:git://github.com/cs-ehu/GAICurricula/.git</developerConnection>
+      <connection>scm:git:https://github.com/cs-ehu/GAICurricula.git</connection>
+      <developerConnection>scm:git:https://github.com/cs-ehu/GAICurricula.git</developerConnection>
       <tag>master</tag>
-      <url>https://github.com/cs-ehu/GAICurricula/</url>
+      <url>https://github.com/cs-ehu/GAICurricula</url>
    </scm>
 
    <properties>
