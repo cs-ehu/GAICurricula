@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['main',['main',['../a00025.html#aa56655a8b942a722a98691bb5941412b',1,'edu.ehu.CS19.GAICurricula.Data2html.main()'],['../a00029.html#a52ecabe81c9c3180cdccb3749b6553d6',1,'edu.ehu.CS19.GAICurricula.Pomexec.main()']]]
+  ['labelsinit',['labelsInit',['../a00029.html#ab5c03aee261eda106376a3111cadaa0a',1,'edu::ehu::CS19::GAICurricula::Pomexec']]],
+  ['listaxqueryfr',['listaXQueryFR',['../a00037.html#a716ee793e86b28484041d2ada3d13266',1,'edu::ehu::CS19::GAICurricula::XQueryMethodsTest']]],
+  ['listaxqueryfr2',['listaXQueryFR2',['../a00037.html#abfdb5b674e64249ab393c5d71ccd9c9e',1,'edu::ehu::CS19::GAICurricula::XQueryMethodsTest']]],
+  ['listaxquerypom',['listaXQueryPOM',['../a00037.html#af899b7ca0c5c00c09a1265e7975c66a1',1,'edu::ehu::CS19::GAICurricula::XQueryMethodsTest']]]
 ];

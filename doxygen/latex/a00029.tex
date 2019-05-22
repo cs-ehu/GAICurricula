@@ -4,17 +4,37 @@
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{a00029_a8de2bd06d0893d4f24ef2bd8216467cf}{Pomexec}} ()
-\begin{DoxyCompactList}\small\item\em Create the application. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Crea la aplicació. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00029_a1542762d65badb0de4c9e00d793acd37}{frame\+Init}} ()
+\begin{DoxyCompactList}\small\item\em Inicializa la ventana inicial y los eventos de cierre de la aplicaci{\ucr}n. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00029_ab5c03aee261eda106376a3111cadaa0a}{labels\+Init}} ()
+\begin{DoxyCompactList}\small\item\em Inicializa las etiquetas de texto de la aplicación para informar al usuario. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00029_a99d8b8d9e55a300b5ce6f7cc7d546a26}{pom\+Text\+Field\+Init}} ()
+\begin{DoxyCompactList}\small\item\em Inicializa el campo de texto correspondiente a elegir la ruta del pom de un proyecto del usuario. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00029_aac5d95af4efdb3dc20e305283cedef95}{html\+Text\+Field\+Init}} ()
+\begin{DoxyCompactList}\small\item\em Inicializa un campo de texto y sugiere una ruta para el fichero html a generar en este. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00029_aea79b02cfc8fae015e78943e32710210}{file\+H\+T\+M\+L\+Text\+Field}} ()
+\begin{DoxyCompactList}\small\item\em Inicializa un campo de texto y sugiere el nombre del fichero html a generar en este. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00029_a8e25f512501551f46bb24a415036f15b}{btn\+Examinar\+Pom\+Init}} ()
+\begin{DoxyCompactList}\small\item\em Inicializa el botón examinar correspondiente a la elección de la ruta del pom y modifica su campo de texto correspondiente cuando se elige la ruta. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00029_a9bc18b3b0b00c0c7cd1e2852abefd3aa}{btn\+Procesar\+Pom\+Init}} (\mbox{\hyperlink{a00033}{X\+Query\+Methods}} xqm)
+\begin{DoxyCompactList}\small\item\em Inicializa el botón para procesar el pom de un proyecto y trata el pom después de validar los campos de texto necesarios de la aplicación. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00029_adddaf261f4abfb185dbaff370be28bef}{btn\+Cancelar\+Init}} ()
+\begin{DoxyCompactList}\small\item\em Inicializa el botón cancelar de la aplicación y controla su evento de salida de la aplicación a partir de él. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00029_aec83fb7dda0b4f2fdfc404ba2330b37a}{btn\+Examinar\+H\+T\+M\+L\+Init}} ()
+\begin{DoxyCompactList}\small\item\em Inicializa el botón examinar correspondiente a la elección de la ruta del html a generar y modifica su campo de texto correspondiente cuando se elige la ruta. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00029_a0b62d43fe793951471585f524b8963f0}{btn\+Ayuda\+Init}} ()
+\begin{DoxyCompactList}\small\item\em Inicializa el botón de ayuda de la aplicación y muestra información de ayuda si se realiza click. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Métodos públicos estáticos}
 \begin{DoxyCompactItemize}
 \item 
 static void \mbox{\hyperlink{a00029_a52ecabe81c9c3180cdccb3749b6553d6}{main}} (String\mbox{[}$\,$\mbox{]} args)
-\begin{DoxyCompactList}\small\item\em Launch the application. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Lanza la aplicación. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Métodos privados}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{a00029_ab89003495509c2f11da18c9675828571}{initialize}} ()
-\begin{DoxyCompactList}\small\item\em Initialize the contents of the frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Inicializa todos los contenidos de la ventana de la aplicación. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Atributos privados}
 \begin{DoxyCompactItemize}
 \item 
@@ -44,7 +64,7 @@ Definición en la línea 29 del archivo Pomexec.\+java.
 
 
 
-Create the application. 
+Crea la aplicació. 
 
 
 
@@ -53,6 +73,123 @@ Definición en la línea 55 del archivo Pomexec.\+java.
 
 
 \subsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{a00029_a0b62d43fe793951471585f524b8963f0}\label{a00029_a0b62d43fe793951471585f524b8963f0}} 
+\index{edu.ehu.CS19.GAICurricula.Pomexec@{edu.ehu.CS19.GAICurricula.Pomexec}!btnAyudaInit@{btnAyudaInit}}
+\index{btnAyudaInit@{btnAyudaInit}!edu.ehu.CS19.GAICurricula.Pomexec@{edu.ehu.CS19.GAICurricula.Pomexec}}
+\subsubsection{\texorpdfstring{btnAyudaInit()}{btnAyudaInit()}}
+{\footnotesize\ttfamily void edu.\+ehu.\+C\+S19.\+G\+A\+I\+Curricula.\+Pomexec.\+btn\+Ayuda\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicializa el botón de ayuda de la aplicación y muestra información de ayuda si se realiza click. 
+
+
+
+Definición en la línea 271 del archivo Pomexec.\+java.
+
+\mbox{\Hypertarget{a00029_adddaf261f4abfb185dbaff370be28bef}\label{a00029_adddaf261f4abfb185dbaff370be28bef}} 
+\index{edu.ehu.CS19.GAICurricula.Pomexec@{edu.ehu.CS19.GAICurricula.Pomexec}!btnCancelarInit@{btnCancelarInit}}
+\index{btnCancelarInit@{btnCancelarInit}!edu.ehu.CS19.GAICurricula.Pomexec@{edu.ehu.CS19.GAICurricula.Pomexec}}
+\subsubsection{\texorpdfstring{btnCancelarInit()}{btnCancelarInit()}}
+{\footnotesize\ttfamily void edu.\+ehu.\+C\+S19.\+G\+A\+I\+Curricula.\+Pomexec.\+btn\+Cancelar\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicializa el botón cancelar de la aplicación y controla su evento de salida de la aplicación a partir de él. 
+
+
+
+Definición en la línea 231 del archivo Pomexec.\+java.
+
+\mbox{\Hypertarget{a00029_aec83fb7dda0b4f2fdfc404ba2330b37a}\label{a00029_aec83fb7dda0b4f2fdfc404ba2330b37a}} 
+\index{edu.ehu.CS19.GAICurricula.Pomexec@{edu.ehu.CS19.GAICurricula.Pomexec}!btnExaminarHTMLInit@{btnExaminarHTMLInit}}
+\index{btnExaminarHTMLInit@{btnExaminarHTMLInit}!edu.ehu.CS19.GAICurricula.Pomexec@{edu.ehu.CS19.GAICurricula.Pomexec}}
+\subsubsection{\texorpdfstring{btnExaminarHTMLInit()}{btnExaminarHTMLInit()}}
+{\footnotesize\ttfamily void edu.\+ehu.\+C\+S19.\+G\+A\+I\+Curricula.\+Pomexec.\+btn\+Examinar\+H\+T\+M\+L\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicializa el botón examinar correspondiente a la elección de la ruta del html a generar y modifica su campo de texto correspondiente cuando se elige la ruta. 
+
+
+
+Definición en la línea 251 del archivo Pomexec.\+java.
+
+\mbox{\Hypertarget{a00029_a8e25f512501551f46bb24a415036f15b}\label{a00029_a8e25f512501551f46bb24a415036f15b}} 
+\index{edu.ehu.CS19.GAICurricula.Pomexec@{edu.ehu.CS19.GAICurricula.Pomexec}!btnExaminarPomInit@{btnExaminarPomInit}}
+\index{btnExaminarPomInit@{btnExaminarPomInit}!edu.ehu.CS19.GAICurricula.Pomexec@{edu.ehu.CS19.GAICurricula.Pomexec}}
+\subsubsection{\texorpdfstring{btnExaminarPomInit()}{btnExaminarPomInit()}}
+{\footnotesize\ttfamily void edu.\+ehu.\+C\+S19.\+G\+A\+I\+Curricula.\+Pomexec.\+btn\+Examinar\+Pom\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicializa el botón examinar correspondiente a la elección de la ruta del pom y modifica su campo de texto correspondiente cuando se elige la ruta. 
+
+
+
+Definición en la línea 166 del archivo Pomexec.\+java.
+
+\mbox{\Hypertarget{a00029_a9bc18b3b0b00c0c7cd1e2852abefd3aa}\label{a00029_a9bc18b3b0b00c0c7cd1e2852abefd3aa}} 
+\index{edu.ehu.CS19.GAICurricula.Pomexec@{edu.ehu.CS19.GAICurricula.Pomexec}!btnProcesarPomInit@{btnProcesarPomInit}}
+\index{btnProcesarPomInit@{btnProcesarPomInit}!edu.ehu.CS19.GAICurricula.Pomexec@{edu.ehu.CS19.GAICurricula.Pomexec}}
+\subsubsection{\texorpdfstring{btnProcesarPomInit()}{btnProcesarPomInit()}}
+{\footnotesize\ttfamily void edu.\+ehu.\+C\+S19.\+G\+A\+I\+Curricula.\+Pomexec.\+btn\+Procesar\+Pom\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00033}{X\+Query\+Methods}}}]{xqm }\end{DoxyParamCaption})}
+
+
+
+Inicializa el botón para procesar el pom de un proyecto y trata el pom después de validar los campos de texto necesarios de la aplicación. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em xqm} & La lógica utilizada para procesar el pom. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 187 del archivo Pomexec.\+java.
+
+\mbox{\Hypertarget{a00029_aea79b02cfc8fae015e78943e32710210}\label{a00029_aea79b02cfc8fae015e78943e32710210}} 
+\index{edu.ehu.CS19.GAICurricula.Pomexec@{edu.ehu.CS19.GAICurricula.Pomexec}!fileHTMLTextField@{fileHTMLTextField}}
+\index{fileHTMLTextField@{fileHTMLTextField}!edu.ehu.CS19.GAICurricula.Pomexec@{edu.ehu.CS19.GAICurricula.Pomexec}}
+\subsubsection{\texorpdfstring{fileHTMLTextField()}{fileHTMLTextField()}}
+{\footnotesize\ttfamily void edu.\+ehu.\+C\+S19.\+G\+A\+I\+Curricula.\+Pomexec.\+file\+H\+T\+M\+L\+Text\+Field (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicializa un campo de texto y sugiere el nombre del fichero html a generar en este. 
+
+
+
+Definición en la línea 155 del archivo Pomexec.\+java.
+
+\mbox{\Hypertarget{a00029_a1542762d65badb0de4c9e00d793acd37}\label{a00029_a1542762d65badb0de4c9e00d793acd37}} 
+\index{edu.ehu.CS19.GAICurricula.Pomexec@{edu.ehu.CS19.GAICurricula.Pomexec}!frameInit@{frameInit}}
+\index{frameInit@{frameInit}!edu.ehu.CS19.GAICurricula.Pomexec@{edu.ehu.CS19.GAICurricula.Pomexec}}
+\subsubsection{\texorpdfstring{frameInit()}{frameInit()}}
+{\footnotesize\ttfamily void edu.\+ehu.\+C\+S19.\+G\+A\+I\+Curricula.\+Pomexec.\+frame\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicializa la ventana inicial y los eventos de cierre de la aplicaci{\ucr}n. 
+
+
+
+Definición en la línea 87 del archivo Pomexec.\+java.
+
+\mbox{\Hypertarget{a00029_aac5d95af4efdb3dc20e305283cedef95}\label{a00029_aac5d95af4efdb3dc20e305283cedef95}} 
+\index{edu.ehu.CS19.GAICurricula.Pomexec@{edu.ehu.CS19.GAICurricula.Pomexec}!htmlTextFieldInit@{htmlTextFieldInit}}
+\index{htmlTextFieldInit@{htmlTextFieldInit}!edu.ehu.CS19.GAICurricula.Pomexec@{edu.ehu.CS19.GAICurricula.Pomexec}}
+\subsubsection{\texorpdfstring{htmlTextFieldInit()}{htmlTextFieldInit()}}
+{\footnotesize\ttfamily void edu.\+ehu.\+C\+S19.\+G\+A\+I\+Curricula.\+Pomexec.\+html\+Text\+Field\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicializa un campo de texto y sugiere una ruta para el fichero html a generar en este. 
+
+
+
+Definición en la línea 144 del archivo Pomexec.\+java.
+
 \mbox{\Hypertarget{a00029_ab89003495509c2f11da18c9675828571}\label{a00029_ab89003495509c2f11da18c9675828571}} 
 \index{edu.ehu.CS19.GAICurricula.Pomexec@{edu.ehu.CS19.GAICurricula.Pomexec}!initialize@{initialize}}
 \index{initialize@{initialize}!edu.ehu.CS19.GAICurricula.Pomexec@{edu.ehu.CS19.GAICurricula.Pomexec}}
@@ -61,11 +198,25 @@ Definición en la línea 55 del archivo Pomexec.\+java.
 
 
 
-Initialize the contents of the frame. 
+Inicializa todos los contenidos de la ventana de la aplicación. 
 
 
 
 Definición en la línea 62 del archivo Pomexec.\+java.
+
+\mbox{\Hypertarget{a00029_ab5c03aee261eda106376a3111cadaa0a}\label{a00029_ab5c03aee261eda106376a3111cadaa0a}} 
+\index{edu.ehu.CS19.GAICurricula.Pomexec@{edu.ehu.CS19.GAICurricula.Pomexec}!labelsInit@{labelsInit}}
+\index{labelsInit@{labelsInit}!edu.ehu.CS19.GAICurricula.Pomexec@{edu.ehu.CS19.GAICurricula.Pomexec}}
+\subsubsection{\texorpdfstring{labelsInit()}{labelsInit()}}
+{\footnotesize\ttfamily void edu.\+ehu.\+C\+S19.\+G\+A\+I\+Curricula.\+Pomexec.\+labels\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicializa las etiquetas de texto de la aplicación para informar al usuario. 
+
+
+
+Definición en la línea 117 del archivo Pomexec.\+java.
 
 \mbox{\Hypertarget{a00029_a52ecabe81c9c3180cdccb3749b6553d6}\label{a00029_a52ecabe81c9c3180cdccb3749b6553d6}} 
 \index{edu.ehu.CS19.GAICurricula.Pomexec@{edu.ehu.CS19.GAICurricula.Pomexec}!main@{main}}
@@ -75,11 +226,25 @@ Definición en la línea 62 del archivo Pomexec.\+java.
 
 
 
-Launch the application. 
+Lanza la aplicación. 
 
 
 
 Definición en la línea 39 del archivo Pomexec.\+java.
+
+\mbox{\Hypertarget{a00029_a99d8b8d9e55a300b5ce6f7cc7d546a26}\label{a00029_a99d8b8d9e55a300b5ce6f7cc7d546a26}} 
+\index{edu.ehu.CS19.GAICurricula.Pomexec@{edu.ehu.CS19.GAICurricula.Pomexec}!pomTextFieldInit@{pomTextFieldInit}}
+\index{pomTextFieldInit@{pomTextFieldInit}!edu.ehu.CS19.GAICurricula.Pomexec@{edu.ehu.CS19.GAICurricula.Pomexec}}
+\subsubsection{\texorpdfstring{pomTextFieldInit()}{pomTextFieldInit()}}
+{\footnotesize\ttfamily void edu.\+ehu.\+C\+S19.\+G\+A\+I\+Curricula.\+Pomexec.\+pom\+Text\+Field\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicializa el campo de texto correspondiente a elegir la ruta del pom de un proyecto del usuario. 
+
+
+
+Definición en la línea 134 del archivo Pomexec.\+java.
 
 
 

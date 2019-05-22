@@ -30,8 +30,8 @@ public class Data2html {
 				"                            alt=\"{$c/prenom}\"\r\n" + 
 				"                            height=\"350\"\r\n" + 
 				"                            width=\"300\"/>\r\n" + 
-				"                        <h3>Datos b�sicos</h3>\r\n" + 
-				"                        <strong>-Nom et pr�nom: </strong>\r\n" + 
+				"                        <h3>Datos bï¿½sicos</h3>\r\n" + 
+				"                        <strong>-Nom et prénom: </strong>\r\n" + 
 				"                        <br>{data($c/@name-nombre-nom), $c/prenom}</br>\r\n" + 
 				"                        <br></br>\r\n" + 
 				"                        <strong>-Date De Naissance: </strong>\r\n" + 
@@ -48,7 +48,7 @@ public class Data2html {
 				"                        <br></br>\r\n" + 
 				"                        <strong>-Tlf/Mobile: </strong>\r\n" + 
 				"                        {$c/mobile, $c/tlfne}\r\n" + 
-				"                        <h3>Direcci�n</h3>\r\n" + 
+				"                        <h3>Dirección</h3>\r\n" + 
 				"                        <strong>Pays: </strong>\r\n" + 
 				"                        <br>{data($c/addresse/@country-paisOrigen-pays)}</br>\r\n" + 
 				"                        <br></br>\r\n" + 
@@ -93,7 +93,7 @@ public class Data2html {
 				"                        <br>{data($c/carriere/@course-curso-cours)}</br>\r\n" + 
 				"                        <br></br>\r\n" + 
 				"                        <strong>-Annees de tudes:</strong>\r\n" + 
-				"                        <br>{data($c/carriere/@yearsstudying-a�oscursando-anneesdetudes)}</br>\r\n" + 
+				"                        <br>{data($c/carriere/@yearsstudying-aï¿½oscursando-anneesdetudes)}</br>\r\n" + 
 				"                        <br></br>\r\n" + 
 				"                        <strong> -Erasmus endroits:</strong>\r\n" + 
 				"                        {\r\n" + 
@@ -105,7 +105,7 @@ public class Data2html {
 				"                        <strong>-Lieu prioritaire:</strong>\r\n" + 
 				"                        {$c/lieuprioritaire}\r\n" + 
 				"                        <br></br>\r\n" + 
-				"                        <h3>Datos ac�demicos/laborales</h3>\r\n" + 
+				"                        <h3>Datos acádemicos/laborales</h3>\r\n" + 
 				"                        <h4>Travails</h4>\r\n" + 
 				"                        {\r\n" + 
 				"                            for $t in $c/travail/occupation\r\n" + 
@@ -121,15 +121,15 @@ public class Data2html {
 				"                                    <br>{data($t/@lieudetravail)}</br>\r\n" + 
 				"                                    <br></br>\r\n" + 
 				"                                    <strong>-Periodo:</strong>\r\n" + 
-				"                                    ({$t/dateded�but}, {$t/datedefin})\r\n" + 
+				"                                    ({$t/datededï¿½but}, {$t/datedefin})\r\n" + 
 				"                                    <strong> -Entreprise: </strong>\r\n" + 
 				"                                    {$t/entreprise}\r\n" + 
 				"                                    <br></br>\r\n" + 
-				"                                    <strong>-Descripci�n: </strong>\r\n" + 
+				"                                    <strong>-Descripciï¿½n: </strong>\r\n" + 
 				"                                    {$t/description}\r\n" + 
 				"                                    <br></br>\r\n" + 
-				"                                    <strong>-Temps con sacr�/Produit: </strong>\r\n" + 
-				"                                    {$t/tempsconsacr�, $t/produit}\r\n" + 
+				"                                    <strong>-Temps con sacrï¿½/Produit: </strong>\r\n" + 
+				"                                    {$t/tempsconsacrï¿½, $t/produit}\r\n" + 
 				"                                </div>\r\n" + 
 				"                        }\r\n" + 
 				"                        <h4>Meilleure notes</h4>\r\n" + 
@@ -185,7 +185,7 @@ public class Data2html {
 				"                            alt=\"{$c/surname}\"\r\n" + 
 				"                            height=\"350\"\r\n" + 
 				"                            width=\"300\"/>\r\n" + 
-				"                        <h3>Datos básicos</h3>\r\n" + 
+				"                        <h3>Datos bÃ¡sicos</h3>\r\n" + 
 				"                        <strong>-Name and surname: </strong>\r\n" + 
 				"                        <br>{data($c/@name-nombre-nom)} {$c/surname}</br>\r\n" + 
 				"                        <br></br>\r\n" + 
@@ -203,7 +203,7 @@ public class Data2html {
 				"                        <br></br>\r\n" + 
 				"                        <strong>-Tlp/Mobile: </strong>\r\n" + 
 				"                        {$c/mobile, $c/tlp}\r\n" + 
-				"                        <h3>Dirección</h3>\r\n" + 
+				"                        <h3>DirecciÃ³n</h3>\r\n" + 
 				"                        <strong>country: </strong>\r\n" + 
 				"                        <br>{data($c/address/@country-paisOrigen-pays)}</br>\r\n" + 
 				"                        <br></br>\r\n" + 
@@ -248,7 +248,7 @@ public class Data2html {
 				"                        <br>{data($c/career/@course-curso-cours)}</br>\r\n" + 
 				"                        <br></br>\r\n" + 
 				"                        <strong>-Years studying:</strong>\r\n" + 
-				"                        <br>{data($c/career/@yearsstudying-añoscursando-anneesdetudes)}</br>\r\n" + 
+				"                        <br>{data($c/career/@yearsstudying-aÃ±oscursando-anneesdetudes)}</br>\r\n" + 
 				"                        <br></br>\r\n" + 
 				"                        <strong> -Erasmus places:</strong>\r\n" + 
 				"                        {\r\n" + 
@@ -263,19 +263,19 @@ public class Data2html {
 				"                        \r\n" + 
 				"                        <h3>Habilidades</h3>\r\n" + 
 				"                        <h4>Skills</h4>\r\n" + 
-				"                        <u>Skill1:</u> <strong> ‏‏‎ </strong>{$c/skillsAndAptitudes/skill1}\r\n" + 
+				"                        <u>Skill1:</u> <strong> â€�â€�â€Ž </strong>{$c/skillsAndAptitudes/skill1}\r\n" + 
 				"                        <br></br>\r\n" + 
-				"                        <u>Skill2:</u> <strong> ‏‏‎ </strong>{$c/skillsAndAptitudes/skill2}\r\n" + 
+				"                        <u>Skill2:</u> <strong> â€�â€�â€Ž </strong>{$c/skillsAndAptitudes/skill2}\r\n" + 
 				"                        <br></br>\r\n" + 
-				"                        <u>Skill3:</u> <strong> ‏‏‎ </strong>{$c/skillsAndAptitudes/skill3}\r\n" + 
+				"                        <u>Skill3:</u> <strong> â€�â€�â€Ž </strong>{$c/skillsAndAptitudes/skill3}\r\n" + 
 				"                        <br></br>\r\n" + 
 				"                         \r\n" + 
 				"                        <h4>Aptitudes</h4>\r\n" + 
-				"                        <u>Aptitude1:</u> <strong> ‏‏‎ </strong>{$c/skillsAndAptitudes/aptitude1}\r\n" + 
+				"                        <u>Aptitude1:</u> <strong> â€�â€�â€Ž </strong>{$c/skillsAndAptitudes/aptitude1}\r\n" + 
 				"                        <br></br>\r\n" + 
-				"                        <u>Aptitude2:</u> <strong> ‏‏‎ </strong>{$c/skillsAndAptitudes/aptitude2}\r\n" + 
+				"                        <u>Aptitude2:</u> <strong> â€�â€�â€Ž </strong>{$c/skillsAndAptitudes/aptitude2}\r\n" + 
 				"                        <br></br>\r\n" + 
-				"                        <u>Aptitude3:</u> <strong> ‏‏‎ </strong>{$c/skillsAndAptitudes/aptitude3}\r\n" + 
+				"                        <u>Aptitude3:</u> <strong> â€�â€�â€Ž </strong>{$c/skillsAndAptitudes/aptitude3}\r\n" + 
 				"                        <br></br>\r\n" + 
 				"                        \r\n" + 
 				"                        <h3>Observations</h3>\r\n" + 
@@ -317,7 +317,7 @@ public class Data2html {
 				"                            <strong>-Id del artefacto: </strong>\r\n" + 
 				"                            <br>{$p/artifactId}</br>\r\n" + 
 				"                            <br></br>\r\n" + 
-				"                            <strong>-Versión: </strong>\r\n" + 
+				"                            <strong>-VersiÃ³n: </strong>\r\n" + 
 				"                            <br>{$p/version}</br>\r\n" + 
 				"                            <br></br>\r\n" + 
 				"                            <strong>-Packaging: </strong>\r\n" + 
@@ -332,14 +332,14 @@ public class Data2html {
 				"                            <strong>-URL: </strong>\r\n" + 
 				"                            <a href=\"{$p/url}\"> Visitar URL del proyecto </a>\r\n" + 
 				"                            <br></br>\r\n" + 
-				"                            <strong>-Codificación del proyecto: </strong>\r\n" + 
+				"                            <strong>-CodificaciÃ³n del proyecto: </strong>\r\n" + 
 				"                            <br>{$p/properties/project.build.sourceEncoding}</br>\r\n" + 
 				"                        </div>\r\n" + 
 				"                        <h3>Dependencias del proyecto</h3>\r\n" + 
 				"                        <div id=\"dependencies\">\r\n" + 
 				"                            <table border=\"1\">\r\n" + 
 				"                                <tr>\r\n" + 
-				"                                    <th>Id del grupo</th><th>Id del artefacto</th><th>Versión</th>\r\n" + 
+				"                                    <th>Id del grupo</th><th>Id del artefacto</th><th>VersiÃ³n</th>\r\n" + 
 				"                                </tr>                            \r\n" + 
 				"                                {\r\n" + 
 				"                                    for $d in $p/dependencies/dependency\r\n" + 

@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['generaxqfichero',['generaXQFichero',['../a00033.html#a7d2040d47b8350ca48da7ce5b658fab2',1,'edu::ehu::CS19::GAICurricula::XQueryMethods']]],
-  ['generaxqpom',['generaXQPOM',['../a00033.html#ae60f32c5f8b4ffe3f2bdd1f44976eacf',1,'edu::ehu::CS19::GAICurricula::XQueryMethods']]]
+  ['consultalistaxquery',['consultaListaXQuery',['../a00033.html#a8b0ac4baf3bbd3829073a87325dd714d',1,'edu::ehu::CS19::GAICurricula::XQueryMethods']]],
+  ['consultalistaxquerytestfr',['consultaListaXQueryTestFR',['../a00037.html#a9c391172ac7518b50fad0569a710d3e7',1,'edu::ehu::CS19::GAICurricula::XQueryMethodsTest']]],
+  ['consultalistaxquerytestfr2',['consultaListaXQueryTestFR2',['../a00037.html#ab30b1e554a49678887f748e9050ec173',1,'edu::ehu::CS19::GAICurricula::XQueryMethodsTest']]],
+  ['consultalistaxquerytestpom',['consultaListaXQueryTestPOM',['../a00037.html#a424440e0527b515a698294d6859d258a',1,'edu::ehu::CS19::GAICurricula::XQueryMethodsTest']]]
 ];

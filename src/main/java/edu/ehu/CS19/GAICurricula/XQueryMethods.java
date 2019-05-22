@@ -50,7 +50,7 @@ public class XQueryMethods {
 			System.err.println("**Error en la escritura del fichero '" + fn2g + "'**");
 		}
 
-		System.out.println("**Fichero generado con Éxito**");
+		System.out.println("**Fichero generado con éxito**");
 
 	}
 
