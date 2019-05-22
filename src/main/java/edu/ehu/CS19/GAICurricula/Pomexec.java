@@ -82,7 +82,7 @@ public class Pomexec {
 	}
 
 	/**
-	 * Inicializa la ventana inicial y los eventos de cierre de la aplicaci�n.
+	 * Inicializa la ventana inicial y los eventos de cierre de la aplicación.
 	 */
 	public void frameInit() {
 		frmHtmlpom = new JFrame();
