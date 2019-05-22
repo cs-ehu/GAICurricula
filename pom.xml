@@ -6,14 +6,12 @@
 
 	<groupId>edu.ehu.CS19</groupId>
 	<artifactId>GAICurricula</artifactId>
-	<version>1.0.1</version>
+	<version>1.5.0</version>
 	<packaging>jar</packaging>
 
 	<name>GAICurricula</name>
-	<description>Proyecto Java de la asignatura Gestión Avanzada de la Información para realizar una página web básica
-		de curriculums para erasmus a través de los datos de un xml utilizando tecnologías de XQuery.
-		Extendido para representar nuevas funcionalidades con MAVEN y adaptado a este.</description>
-	<url>http://maven.apache.org</url>
+	<description>Proyecto Java de la asignatura Gestión Avanzada de la Información para realizar una página web básica de curriculums para erasmus a través de los datos de un xml utilizando tecnologías de XQuery. Extendido para representar nuevas funcionalidades con MAVEN y adaptado a este.</description>
+	<url>https://github.com/cs-ehu/GAICurricula</url>
 
 	<developers>
 
