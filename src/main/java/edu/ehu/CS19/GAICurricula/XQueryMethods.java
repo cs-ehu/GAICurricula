@@ -162,8 +162,9 @@ public class XQueryMethods {
 	/**
 	 * A partir de un XQuery con una referencia a un fichero XML, saca datos que se puedan listar en un ArrayList.
 	 * 
-	 * @param xquery 
-	 * @return result
+	 * @param xquery la consulta xquery
+	 * 
+	 * @return el resultado de la consulta
 	 */
 	public ArrayList<String> consultaListaXQuery(String xquery) {
 		System.out.println("**Empezando consulta**");
