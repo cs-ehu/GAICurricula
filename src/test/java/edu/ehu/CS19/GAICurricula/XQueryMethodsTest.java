@@ -19,7 +19,7 @@ class XQueryMethodsTest {
 	static ArrayList<String> esperadoPOM;
 
 	@BeforeAll
-	static void beforeAll() throws Exception {
+	static void beforeAll() {
 
 		xqm = new XQueryMethods();
 
