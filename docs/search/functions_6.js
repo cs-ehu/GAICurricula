@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['xquerymethods',['XQueryMethods',['../a00033.html#ade5a845ccb94c1feb5420a2550243985',1,'edu::ehu::CS19::GAICurricula::XQueryMethods']]]
+  ['labelsinit',['labelsInit',['../a00029.html#ab5c03aee261eda106376a3111cadaa0a',1,'edu::ehu::CS19::GAICurricula::Pomexec']]]
 ];

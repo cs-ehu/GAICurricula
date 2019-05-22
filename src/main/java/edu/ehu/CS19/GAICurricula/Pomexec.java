@@ -34,7 +34,7 @@ public class Pomexec {
 	private JTextField fileHTMLField;
 
 	/**
-	 * Launch the application.
+	 * Lanza la aplicación.
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -50,17 +50,41 @@ public class Pomexec {
 	}
 
 	/**
-	 * Create the application.
+	 * Crea la aplicació.
 	 */
 	public Pomexec() {
 		initialize();
 	}
 
 	/**
-	 * Initialize the contents of the frame.
+	 * Inicializa todos los contenidos de la ventana de la aplicación.
 	 */
 	private void initialize() {
 		XQueryMethods xqm = new XQueryMethods();
+		
+		//Inicialización de la ventana de la aplicación
+		frameInit();
+		
+		//Inicialización de las etiquetas de la aplicación
+		labelsInit();
+		
+		//Inicialización de los campos de texto de la aplicación
+		pomTextFieldInit();
+		htmlTextFieldInit();
+		fileHTMLTextField();
+		
+		//Inicialización de los botones de la aplicación
+		btnExaminarPomInit();
+		btnProcesarPomInit(xqm);
+		btnCancelarInit();
+		btnExaminarHTMLInit();
+		btnAyudaInit();
+	}
+
+	/**
+	 * Inicializa la ventana inicial y los eventos de cierre de la aplicaci�n.
+	 */
+	public void frameInit() {
 		frmHtmlpom = new JFrame();
 		frmHtmlpom.setIconImage(Toolkit.getDefaultToolkit().getImage(System.getProperty("user.dir") + "\\imgs\\app.png"));
 		frmHtmlpom.addWindowListener(new WindowAdapter() {
@@ -69,7 +93,7 @@ public class Pomexec {
 				int confirmed = JOptionPane.showConfirmDialog(null, 
 						"¿Estás seguro de que quieres salir?", "Salir del programa",
 						JOptionPane.YES_NO_OPTION);
-
+	
 				if (confirmed == JOptionPane.YES_OPTION) {
 					System.exit(0);
 				}
@@ -79,32 +103,67 @@ public class Pomexec {
 				JOptionPane.showMessageDialog(null, "¡Bienvenido! antes de continuar, recuerde borrar todos los atributos de la etiqueta project. \n -Software creado por: @FosterGun");
 			}
 		});
-
+	
 		frmHtmlpom.setTitle("HTMLPom");
 		frmHtmlpom.setResizable(false);
 		frmHtmlpom.setBounds(100, 100, 450, 300);
 		frmHtmlpom.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		frmHtmlpom.getContentPane().setLayout(null);
+	}
 
-		pomField = new JTextField();
-		pomField.setBounds(43, 49, 254, 20);
-		frmHtmlpom.getContentPane().add(pomField);
-		pomField.setColumns(10);
-
+	/**
+	 * Inicializa las etiquetas de texto de la aplicación para informar al usuario.
+	 */
+	public void labelsInit() {
 		JLabel lblRutaDeDestino = new JLabel("Ruta de destino del POM");
 		lblRutaDeDestino.setBounds(43, 24, 263, 14);
 		frmHtmlpom.getContentPane().add(lblRutaDeDestino);
-
+		
 		JLabel lblRutaDeDestino_1 = new JLabel("Ruta de destino del fichero HTML que se va a crear");
 		lblRutaDeDestino_1.setBounds(43, 88, 348, 14);
 		frmHtmlpom.getContentPane().add(lblRutaDeDestino_1);
+		
+		JLabel lblNombreDelFichero = new JLabel("Nombre del fichero HTML deseado");
+		lblNombreDelFichero.setBounds(43, 145, 348, 14);
+		frmHtmlpom.getContentPane().add(lblNombreDelFichero);
+	}
 
+	/**
+	 * Inicializa el campo de texto correspondiente a elegir la ruta del pom de un proyecto del usuario.
+	 */
+	public void pomTextFieldInit() {
+		pomField = new JTextField();
+		pomField.setColumns(10);
+		pomField.setBounds(43, 49, 254, 20);
+		frmHtmlpom.getContentPane().add(pomField);
+	}
+
+	/**
+	 * Inicializa un campo de texto y sugiere una ruta para el fichero html a generar en este.
+	 */
+	public void htmlTextFieldInit() {
 		htmlField = new JTextField();
 		htmlField.setText(System.getProperty("user.home") + "\\Desktop");
 		htmlField.setColumns(10);
 		htmlField.setBounds(43, 113, 254, 20);
 		frmHtmlpom.getContentPane().add(htmlField);
+	}
+	
+	/**
+	 * Inicializa un campo de texto y sugiere el nombre del fichero html a generar en este.
+	 */
+	public void fileHTMLTextField() {
+		fileHTMLField = new JTextField();
+		fileHTMLField.setText("pomHTML.html");
+		fileHTMLField.setColumns(10);
+		fileHTMLField.setBounds(43, 170, 166, 20);
+		frmHtmlpom.getContentPane().add(fileHTMLField);
+	}
 
+	/**
+	 * Inicializa el botón examinar correspondiente a la elección de la ruta del pom y modifica su campo de texto correspondiente cuando se elige la ruta.
+	 */
+	public void btnExaminarPomInit() {
 		JButton btnExaminarPom = new JButton("Examinar...");
 		btnExaminarPom.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -118,7 +177,14 @@ public class Pomexec {
 		});
 		btnExaminarPom.setBounds(307, 49, 101, 21);
 		frmHtmlpom.getContentPane().add(btnExaminarPom);
+	}
 
+	/**
+	 * Inicializa el botón para procesar el pom de un proyecto y trata el pom después de validar los campos de texto necesarios de la aplicación.
+	 * 
+	 * @param xqm La lógica utilizada para procesar el pom.
+	 */
+	public void btnProcesarPomInit(XQueryMethods xqm) {
 		JButton btnProcesarPom = new JButton("Procesar POM");
 		btnProcesarPom.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -139,7 +205,7 @@ public class Pomexec {
 							int confirmed = JOptionPane.showConfirmDialog(null, 
 									"¡El fichero HTML ha sido generado con éxito! \n¿Desea verlo? si presiona sí se le abrirá.", "¡Archivo HTML generado!",
 									JOptionPane.YES_NO_OPTION);
-
+	
 							if (confirmed == JOptionPane.YES_OPTION) {
 								Desktop desktop = Desktop.getDesktop();
 								File file = new File(htmlField.getText().toString() + "//" + fileHTMLField.getText().toString());
@@ -157,14 +223,19 @@ public class Pomexec {
 		});
 		btnProcesarPom.setBounds(72, 220, 137, 23);
 		frmHtmlpom.getContentPane().add(btnProcesarPom);
+	}
 
+	/**
+	 * Inicializa el botón cancelar de la aplicación y controla su evento de salida de la aplicación a partir de él.
+	 */
+	public void btnCancelarInit() {
 		JButton btnCancelar = new JButton("Cancelar");
 		btnCancelar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				int confirmed = JOptionPane.showConfirmDialog(null, 
 						"¿Estás seguro de que quieres salir?", "Salir del programa",
 						JOptionPane.YES_NO_OPTION);
-
+	
 				if (confirmed == JOptionPane.YES_OPTION) {
 					System.exit(0);
 				}
@@ -172,7 +243,12 @@ public class Pomexec {
 		});
 		btnCancelar.setBounds(219, 220, 137, 23);
 		frmHtmlpom.getContentPane().add(btnCancelar);
+	}
 
+	/**
+	 * Inicializa el botón examinar correspondiente a la elección de la ruta del html a generar y modifica su campo de texto correspondiente cuando se elige la ruta.
+	 */
+	public void btnExaminarHTMLInit() {
 		JButton btnExaminarHTML = new JButton("Examinar...");
 		btnExaminarHTML.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -187,21 +263,12 @@ public class Pomexec {
 		});
 		btnExaminarHTML.setBounds(307, 113, 101, 21);
 		frmHtmlpom.getContentPane().add(btnExaminarHTML);
+	}
 
-		JLabel lblNombreDelFichero = new JLabel("Nombre del fichero HTML deseado");
-		lblNombreDelFichero.setBounds(43, 145, 348, 14);
-		frmHtmlpom.getContentPane().add(lblNombreDelFichero);
-
-		fileHTMLField = new JTextField();
-		fileHTMLField.setText("pomHTML.html");
-		fileHTMLField.setColumns(10);
-		fileHTMLField.setBounds(43, 170, 166, 20);
-		frmHtmlpom.getContentPane().add(fileHTMLField);
-
-		JButton btnNewButton = new JButton("New button");
-		btnNewButton.setBounds(345, 220, 46, -30);
-		frmHtmlpom.getContentPane().add(btnNewButton);
-
+	/**
+	 * Inicializa el botón de ayuda de la aplicación y muestra información de ayuda si se realiza click.
+	 */
+	public void btnAyudaInit() {
 		JButton btnAyuda = new JButton("?");
 		btnAyuda.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {

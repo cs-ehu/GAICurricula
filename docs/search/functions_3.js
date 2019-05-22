@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['main',['main',['../a00025.html#aa56655a8b942a722a98691bb5941412b',1,'edu.ehu.CS19.GAICurricula.Data2html.main()'],['../a00029.html#a52ecabe81c9c3180cdccb3749b6553d6',1,'edu.ehu.CS19.GAICurricula.Pomexec.main()']]]
+  ['generaxqfichero',['generaXQFichero',['../a00033.html#a7d2040d47b8350ca48da7ce5b658fab2',1,'edu::ehu::CS19::GAICurricula::XQueryMethods']]],
+  ['generaxqpom',['generaXQPOM',['../a00033.html#ae60f32c5f8b4ffe3f2bdd1f44976eacf',1,'edu::ehu::CS19::GAICurricula::XQueryMethods']]]
 ];
