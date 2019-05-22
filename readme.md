@@ -1,12 +1,18 @@
 # GAICurricula
 
+[![GitHub Release](https://img.shields.io/github/release/cs-ehu/GAICurricula.svg)](https://github.com/cs-ehu/GAICurricula/releases)
+
 ## Índice
-1. [Introducción](#1-introducción)
-2. [Requisitos para la aplicación](#2-requisitos-para-la-aplicación)
-3. [Instalación y uso de la aplicación](#3-instalación-y-uso-de-la-aplicación)
-4. [Estructura del proyecto](#4-estructura-del-proyecto)
-5. [Licencia](#5-licencia)
-6. [Autoría](#6-autoría)
+- [GAICurricula](#gaicurricula)
+  - [Índice](#Índice)
+  - [1. Introducción](#1-introducción)
+  - [2. Requisitos para la aplicación](#2-requisitos-para-la-aplicación)
+  - [3. Instalación y uso de la aplicación](#3-instalación-y-uso-de-la-aplicación)
+    - [Instalación y otras utilidades a comentar](#instalación-y-otras-utilidades-a-comentar)
+    - [Uso de la aplicación](#uso-de-la-aplicación)
+  - [4. Estructura del proyecto](#4-estructura-del-proyecto)
+  - [5. Licencia](#5-licencia)
+  - [6. Autoría](#6-autoría)
 
 ## 1. Introducción
 GAICurricula es un proyecto que nació en una asignatura llamada Gestión Avanzada de la Información, en la cual la mayor parte de su tiempo se dedica a estudiar tecnologías para XML.
